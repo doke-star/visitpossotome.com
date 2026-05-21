@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Visit Possotomè - Discover a hidden gem on the shores of Lake Ahémé in Benin, West Africa.">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Visit Possotome" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <title>Visit Possotomè, Benin, West Africa</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Notre CSS unique -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+      <img src="img/logo.svg"
+         alt="Visit Possotomè Logo"
+         class="logo-img">
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal"
+              aria-expanded="false"
+              aria-label="Open navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="life.html">Possotomè Life</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+<section class="hero">
+
+  <!-- Les slides — images en rotation -->
+  <div class="vp-hero-slide"></div>
+  <div class="vp-hero-slide"></div>
+  <div class="vp-hero-slide"></div>
+  <div class="vp-hero-slide"></div>
+  <div class="vp-hero-slide"></div>
+  <div class="vp-hero-slide"></div>
+
+  <!-- Couche sombre sur les images -->
+  <div class="vp-hero-overlay"></div>
+
+  <!-- Contenu texte -->
+  <div class="vp-hero-content">
+
+    <div class="vp-hero-location">
+      <i class="bi bi-geo-alt-fill me-1"></i>
+      Mono, Benin-West Africa
+    </div>
+
+    <h1>
+      Welcome to<br>
+      <span>Possotomè</span>
+    </h1>
+
+    <p class="vp-hero-description">
+      A living town on the shores of Lake Ahémé, where ancient traditions,
+      warm communities and the healing power of nature come together.
+    </p>
+
+    <div class="vp-hero-buttons">
+      <a href="life.html" class="vp-btn-hero-white">
+        Discover the culture
+      </a>
+      <a href="gallery.html" class="vp-btn-hero-outline">
+        See the gallery
+      </a>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ============================================
+       PRÉSENTATION
+       ============================================ -->
+  <section class="vp-section-intro">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Texte -->
+        <div class="col-lg-6">
+          <p class="vp-section-label">About Possotomè</p>
+          <h2>A town shaped by the lake and its people</h2>
+          <p>
+            Nestled on the shores of Lake Ahémé in southern Benin,
+            Possotomè is one of the country's hidden treasures.
+            Known far beyond its borders for its natural thermal springs,
+            the town is home to a rich mosaic of ethnicities, traditions
+            and everyday life that few visitors have had the privilege to witness.
+          </p>
+          <p>
+            Here, the lake is not just a landscape, it is a way of life.
+            Fishermen set out before dawn, children play on the water's edge,
+            and elders gather under mango trees to share the stories that
+            hold this community together.
+          </p>
+          <a href="life.html" class="vp-btn mt-2 d-inline-block">
+            Explore Possotomè Life
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img src="img/lake4.jpg"
+               alt="Lake Ahémé, Possotomè"
+               style="width:100%; height:420px;
+                      object-fit:cover;
+                      object-position: center 15%;
+                      border-radius:10px;
+                      box-shadow:0 8px 32px rgba(12,68,124,0.12);">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CARTES
+       ============================================ -->
+  <section class="vp-section-cards">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">A glimpse into Possotomè</p>
+        <h2>Life, culture and discovery</h2>
+        <p style="max-width:500px; margin: 0.8rem auto 0;
+                  color:#666; font-size:0.95rem;">
+          Three windows into what makes Possotomè unlike anywhere else,
+          told through the eyes of someone who grew up here.
+        </p>
+      </div>
+
+      <div class="vp-grid">
+
+        <!-- Carte 1 : vie autour du lac -->
+        <div>
+          <a href="life.html" class="vp-photo-card">
+            <img src="img/lake3.jpg"
+                 alt="Life on Lake Ahémé"
+                 class="vp-photo-card-img">
+            <div class="vp-photo-card-body">
+              <span class="vp-tag">Daily life</span>
+              <h3>The lake, the rhythm of life</h3>
+              <p>
+                Before the sun rises, the fishermen are already on the water.
+                Life in Possotomè moves to the quiet rhythm of Lake Ahémé.
+              </p>
+              <span class="vp-photo-card-link">
+                Discover more <i class="bi bi-arrow-right ms-1"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Carte 2 : traditions et fêtes -->
+        <div>
+          <a href="life.html" class="vp-photo-card">
+            <img src="img/hero3.jpg"
+                 alt="Life based on the culture of Possotomè"
+                 class="vp-photo-card-img">
+            <div class="vp-photo-card-body">
+              <span class="vp-tag">Culture</span>
+              <h3>Traditions that have never faded</h3>
+              <p>
+                From the Festival Awilé to the royal ceremonies of January,
+                Possotomè lives its heritage with pride and joy.
+              </p>
+              <span class="vp-photo-card-link">
+                Discover more <i class="bi bi-arrow-right ms-1"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Carte 3 : les gens -->
+        <div>
+          <a href="gallery.html" class="vp-photo-card">
+            <img src="img/facefull.jpg"
+                 alt="life on the lake of Possotomè"
+                 class="vp-photo-card-img">
+            <div class="vp-photo-card-body">
+              <span class="vp-tag">People</span>
+              <h3>Faces full of story</h3>
+              <p>
+                The people of Possotomè are its greatest treasure,
+                warm, resilient, and deeply rooted in who they are.
+              </p>
+              <span class="vp-photo-card-link">
+                See the gallery <i class="bi bi-arrow-right ms-1"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CITATION
+       ============================================ -->
+  <section class="vp-section-quote">
+    <blockquote>
+      "Possotomè did not make me who I am by chance,
+      it shaped me through its lake, its people, and its stories.
+      This website is my way of saying thank you."
+    </blockquote>
+    <cite>Djahou Oke, born and raised in Possotomè</cite>
+  </section>
+
+  <!-- =========================================
+     LOCATION SECTION
+     ========================================= -->
+
+<section class="vp-section">
+
+  <div class="container">
+
+    <!-- Section title -->
+    <div class="text-center mb-5">
+
+      <h2 style="color:var(--bleu-profond);">
+        Discover Where Possotomè Is Located
+      </h2>
+
+      <p style="max-width:760px;
+          margin:auto;
+          color:#666;
+          line-height:1.9;
+          font-size:1rem;
+          text-align:justify;">
+
+        Nestled on the peaceful shores of Lake Ahémé in southern Benin,
+        Possotomè is a cultural and historical destination known for its
+        thermal spring, rich traditions and vibrant community life.
+        Located within the commune of Bopa in the Mono Department,
+        the area is formed by a network of villages united by a shared 
+        cultural identity, ancestral traditions and strong community ties.
+      </p>
+
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container">
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253679.3333975273!2d1.8291035015831965!3d6.554524339730364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10248548880d1af7%3A0x42e602ccdecdd9f5!2sPossotom%C3%A9%2C%20Bopa!5e0!3m2!1sen!2sfi!4v1779212518560!5m2!1sen!2sfi"
+              width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </div>
+
+    <!-- Location text -->
+    <p class="text-center mt-4"
+       style="color:#666;
+              font-size:0.95rem;
+              letter-spacing:0.03em;">
+
+      📍 Possotomè — Commune of Bopa, Mono Department, Republic of Benin
+
+    </p>
+
+  </div>
+
+</section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div class="container">
+
+      <div class="vp-footer-brand">Visit <span>Possotomè</span></div>
+      <p class="vp-footer-personal">
+        A window into the life, culture and soul of Possotomè, Benin, West Africa.
+      </p>
+
+      <hr class="vp-footer-divider">
+
+      <p class="vp-footer-bottom">
+        &copy; 2026 Djahou Oke, Visit Possotomè &nbsp;|&nbsp; Benin, West Africa
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

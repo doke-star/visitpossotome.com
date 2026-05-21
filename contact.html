@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact - Visit Possotomè. About this project and its author, Djahou Oke.">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Visit Possotome" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <title>Contact - Visit Possotomè</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Notre CSS unique -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    .vp-page-hero {
+      background: linear-gradient(
+        to bottom,
+        rgba(12, 68, 124, 0.55) 0%,
+        rgba(12, 68, 124, 0.78) 100%
+      ),
+      linear-gradient(135deg, #0C447C 0%, #185FA5 60%, #7BBFE0 100%);
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      color: var(--blanc);
+    }
+
+    .vp-page-hero h1 {
+      color: var(--blanc);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .vp-page-hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* Carte de visite principale */
+    .vp-contact-card {
+      background: var(--blanc);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(12, 68, 124, 0.14);
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* En-tête de la carte */
+    .vp-contact-card-header {
+      background: linear-gradient(
+        135deg,
+        var(--bleu-profond) 0%,
+        var(--bleu-principal) 100%
+      );
+      padding: 3rem 2.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      color: var(--blanc);
+    }
+
+    .vp-contact-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid rgba(255,255,255,0.4);
+      flex-shrink: 0;
+    }
+
+    .vp-contact-avatar-placeholder {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: 4px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      flex-shrink: 0;
+    }
+
+    .vp-contact-header-info h2 {
+      color: var(--blanc);
+      font-size: 1.7rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .vp-contact-role {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bleu-clair);
+      margin-bottom: 0.6rem;
+    }
+
+    .vp-contact-header-info p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Corps de la carte */
+    .vp-contact-card-body {
+      padding: 2.5rem;
+    }
+
+    /* Ligne d'information */
+    .vp-contact-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--bleu-tres-clair);
+    }
+
+    .vp-contact-info-row:last-child {
+      border-bottom: none;
+    }
+
+    .vp-contact-info-icon {
+      width: 40px;
+      height: 40px;
+      background-color: var(--bleu-tres-clair);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bleu-principal);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .vp-contact-info-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 0.2rem;
+    }
+
+    .vp-contact-info-value {
+      font-size: 0.95rem;
+      color: var(--gris-texte);
+      line-height: 1.6;
+    }
+
+    .vp-contact-info-value a {
+      color: var(--bleu-principal);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .vp-contact-info-value a:hover {
+      color: var(--bleu-profond);
+      text-decoration: underline;
+    }
+
+    /* Réseaux sociaux */
+    .vp-social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .vp-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--bleu-tres-clair);
+      border: 1px solid var(--bleu-clair);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      color: var(--bleu-profond);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-weight: 600;
+    }
+
+    .vp-social-btn:hover {
+      background-color: var(--bleu-principal);
+      border-color: var(--bleu-principal);
+      color: var(--blanc);
+      text-decoration: none;
+    }
+
+    /* Message personnel */
+    .vp-personal-message {
+      background: linear-gradient(
+        135deg,
+        var(--bleu-tres-clair) 0%,
+        #fff 100%
+      );
+      border-left: 4px solid var(--bleu-moyen);
+      border-radius: 0 10px 10px 0;
+      padding: 1.5rem 1.8rem;
+      margin-top: 2rem;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.9;
+    }
+
+    .vp-personal-message strong {
+      color: var(--bleu-profond);
+      font-style: normal;
+    }
+
+    /* Disclaimer */
+    .vp-disclaimer {
+      background-color: var(--bleu-tres-clair);
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: #888;
+      line-height: 1.7;
+    }
+
+    .vp-disclaimer i {
+      color: var(--bleu-moyen);
+      margin-right: 0.4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 576px) {
+      .vp-contact-card-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+      .vp-contact-card-body {
+        padding: 1.5rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="img/logo.svg"
+         alt="Visit Possotomè Logo"
+         class="logo-img">
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal"
+              aria-expanded="false"
+              aria-label="Open navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="life.html">Possotomè Life</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       EN-TÊTE DE PAGE
+       ============================================ -->
+  <div class="vp-page-hero">
+    <span class="vp-tag mb-3 d-inline-block">
+      <i class="bi bi-person-fill me-1"></i> About this project
+    </span>
+    <h1>Contact</h1>
+    <p>
+      The person behind Visit Possotomè and the story
+      that inspired this website.
+    </p>
+  </div>
+
+  <!-- ============================================
+       CARTE DE VISITE
+       ============================================ -->
+  <section class="vp-section" style="background-color: var(--bleu-tres-clair);">
+    <div class="container">
+
+      <div class="vp-contact-card">
+
+        <!-- EN-TÊTE : photo + nom + citation courte -->
+        <div class="vp-contact-card-header">
+          <img src="img/sabin.jpg"
+                 alt="Sabin"
+                 class="vp-contact-avatar">
+
+          <div class="vp-contact-header-info">
+            <h2>Djahou Oke</h2>
+            <div class="vp-contact-role">
+              Author - Visit Possotomè
+            </div>
+            <p>
+              "Possotomè gave me everything, my roots, my values,
+              my sense of community. This website is my way of giving back."
+            </p>
+          </div>
+
+        </div>
+
+        <!-- CORPS : informations de contact -->
+        <div class="vp-contact-card-body">
+
+          <!-- Origine -->
+          <div class="vp-contact-info-row">
+            <div class="vp-contact-info-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div>
+              <div class="vp-contact-info-label">Origin</div>
+              <div class="vp-contact-info-value">
+                Possotomè, Mono Department, Republic of Benin, West Africa
+              </div>
+            </div>
+          </div>
+
+          <!-- Localisation actuelle -->
+          <div class="vp-contact-info-row">
+            <div class="vp-contact-info-icon">
+              <i class="bi bi-house-fill"></i>
+            </div>
+            <div>
+              <div class="vp-contact-info-label">Currently based in</div>
+              <div class="vp-contact-info-value">
+                Helsinki, Finland
+              </div>
+            </div>
+          </div>
+
+          <!-- Téléphone -->
+          <div class="vp-contact-info-row">
+            <div class="vp-contact-info-icon">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div>
+              <div class="vp-contact-info-label">Phone</div>
+              <div class="vp-contact-info-value">
+                <a href="tel:+2290197730445">
+                  🇧🇯 +229 01 97 73 04 45
+                </a>
+                <br>
+                <a href="tel:+358408533690">
+                  🇫🇮 +358 40 853 36 90
+                </a>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Email -->
+          <div class="vp-contact-info-row">
+            <div class="vp-contact-info-icon">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div>
+              <div class="vp-contact-info-label">Email</div>
+              <div class="vp-contact-info-value">
+                <a href="mailto:djahouoke@visitpossotome.com">
+                  djahouoke@visitpossotome.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <!-- Institution -->
+          <div class="vp-contact-info-row">
+            <div class="vp-contact-info-icon">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div>
+              <div class="vp-contact-info-label">Institution</div>
+              <div class="vp-contact-info-value">
+                <a href="https://www.lapinamk.fi" target="_blank">
+                  Lapland University of Applied Sciences — Lapin AMK
+                </a><br>
+                <span style="font-size:0.82rem; color:#aaa;">
+                  Verkkosivujen toteutus ja julkaisu — Web Publishing course
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Domaine -->
+          <div class="vp-contact-info-row">
+            <div class="vp-contact-info-icon">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <div>
+              <div class="vp-contact-info-label">Website</div>
+              <div class="vp-contact-info-value">
+                <a href="https://www.visitpossotome.com" target="_blank">
+                  visitpossotome.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+         
+
+          <!-- Réseaux sociaux -->
+          <div class="vp-contact-info-row">
+            <div class="vp-contact-info-icon">
+              <i class="bi bi-share-fill"></i>
+            </div>
+            <div>
+              <div class="vp-contact-info-label">Follow the project</div>
+              <div class="vp-social-links">
+                <a href="https://www.linkedin.com/in/djahou-oke?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                 target="_blank" class="vp-social-btn">
+                <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.facebook.com/share/1CPqD4ivii/?mibextid=wwXIfr" class="vp-social-btn">
+                  <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/okedjahou?igsh=MTJsMm5ydzZ1eDhxdw%3D%3D&utm_source=qr" class="vp-social-btn">
+                  <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://www.visitpossotome.com"
+                   target="_blank" class="vp-social-btn">
+                  <i class="bi bi-globe2"></i> visitpossotome.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+<!-- =========================================
+     CONTACT FORM
+     ========================================= -->
+
+<section class="vp-section">
+
+  <div class="container">
+
+    <div class="contact-card text-center">
+
+      <div class="contact-icon">
+        <i class="bi bi-envelope-paper-heart"></i>
+      </div>
+
+      <h2 style="color:var(--bleu-profond);">
+        Community Exchange
+      </h2>
+
+      <p style="max-width:760px;
+                margin:auto auto 2rem;
+                color:#666;
+                line-height:1.9;
+                text-align:left;">
+
+        Whether you would like to learn more about Possotomè,
+        share memories, collaborate on cultural initiatives,
+        contribute historical information or simply get in touch,
+        you are warmly welcome to send a message.
+
+      </p>
+        <!--  Microsoft Forms -->
+      <a href="https://forms.microsoft.com/Pages/ResponsePage.aspx?id=b6ZgTI0KbkSawINqANhFQlMldLZoGpRLpQfaY6v-0fpUM0lBMENZWlFMNkNTTUE3S0ZBNzZKVE9QOC4u"
+         target="_blank"
+         class="vp-btn">
+
+        Send a Message
+        <i class="bi bi-box-arrow-up-right ms-2"></i>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+          <!-- Personal Message -->
+          <div class="vp-personal-message">
+
+          <strong>Why this website?</strong><br><br>
+
+            I was born and raised in Possotomè — a place that shaped my identity,
+            my values, and my sense of community. Growing up along the shores of
+            Lake Ahémé, surrounded by rich traditions and strong social ties,
+            deeply influenced the person I have become today.<br><br>
+
+            From an early age, I was not only observing community life,
+            I was actively involved in it. During my years at the Collège de Possotomè,
+            I joined local youth organisations, beginning with UJAP, where I
+            participated in community development initiatives that are now documented
+            on this website. Over time, this engagement expanded beyond my hometown,
+            leading me to collaborate with youth and development organisations at
+            communal, departmental, and national levels across Benin.<br><br>
+
+            One of the experiences I am most proud of was contributing to the
+            development and digital transformation of <strong>Radio Ahémé FM</strong>,
+            helping extend the voice of Possotomè beyond its local borders.
+            I was also involved in <strong>CACE</strong>
+            (Cercle des Amis de la Culture et de l'Épanouissement),
+            an organisation dedicated to promoting cultural activities and keeping
+            community creativity alive during holiday events for younger generations.<br><br>
+
+            These experiences gave me more than organisational skills,
+            they gave me a deep and personal understanding of Possotomè:
+            its people, its institutions, its challenges, and its remarkable potential.
+            I am not simply someone from Possotomè; I am someone who grew alongside
+            the community and contributed, in my own way, to its development.<br><br>
+
+            When I moved to Finland to pursue my studies, I realised how little
+            information about Possotomè exists online, despite the richness of its
+            history, culture, and community life. For years, I had wanted to create
+            digital content that could preserve and share this heritage with a wider audience.
+            This project finally gave me the opportunity and the technical tools to do so.<br><br>
+
+            This website is therefore more than an academic project.
+            It is a personal tribute to the community that raised me,
+            created with respect, lived experience, and a genuine desire
+            to make Possotomè better known to the world.
+
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="vp-disclaimer">
+            <i class="bi bi-info-circle-fill"></i>
+            This website was created as a final project for the
+            <em>Verkkosivujen toteutus ja julkaisu</em> (Web Publishing)
+            course at Lapland University of Applied Sciences (Lapin AMK), 2026.
+            For a long time, I have wanted to create digital content that highlights 
+            the culture, history, and everyday life of Possotomè. This course finally 
+            provided me with both the technical skills and the opportunity to transform 
+            that vision into a real project.
+            This website is an independent academic and personal initiative and does not 
+            represent any official organisation or institution.
+            All personal photographs are used with the knowledge and consent of the people 
+            depicted. External image sources are credited where applicable.
+          </div>
+
+        </div>
+        <!-- fin vp-contact-card-body -->
+
+      </div>
+      <!-- fin vp-contact-card -->
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div class="container">
+      <div class="vp-footer-brand">Visit <span>Possotomè</span></div>
+      <p class="vp-footer-personal">
+        A window into the life, culture and soul of Possotomè, Benin, West Africa.
+      </p>
+      <hr class="vp-footer-divider">
+      <p class="vp-footer-bottom">
+        &copy; 2026 Djahou Oke, Visit Possotomè &nbsp;|&nbsp; Benin, West Africa
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
