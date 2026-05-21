@@ -414,6 +414,14 @@ footer a:hover {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .vp-hero-slide {
+    background-position: top center !important;
+  }
+
+}
 /* Le fondu */
 @keyframes vp-fade {
   0%   { opacity: 0; }
