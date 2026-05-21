@@ -407,6 +407,13 @@ footer a:hover {
   background-size: cover;
   animation-delay: 25s;
 }
+@media (max-width: 768px) {
+
+  .vp-hero-slide {
+    background-position: center top;
+  }
+
+}
 /* Le fondu */
 @keyframes vp-fade {
   0%   { opacity: 0; }
@@ -735,6 +742,21 @@ footer a:hover {
   color: #666;
 }
 
+.image-credit {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.image-credit a {
+  color: #0d4d8b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.image-credit a:hover {
+  text-decoration: underline;
+}
 
 /* Mobile optimisation */
 
