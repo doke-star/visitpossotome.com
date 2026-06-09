@@ -749,6 +749,9 @@ footer a:hover {
   line-height: 1.9;
   color: #666;
 }
+.vp-personal-message {
+  border-left: 4px solid var(--bleu-moyen);
+}
 
 .image-credit {
   font-size: 0.85rem;
