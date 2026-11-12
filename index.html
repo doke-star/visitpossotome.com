@@ -145,6 +145,42 @@
   </section>
 
   <!-- ============================================
+       PROCHAIN ÉVÉNEMENT
+       Le contenu par défaut (cérémonie royale) est
+       remplacé par le script en bas de page selon
+       la date du jour.
+       ============================================ -->
+  <section class="vp-next-event" aria-labelledby="h-next-event">
+    <div class="container">
+      <div class="vp-next-event-card" id="nextEvent">
+        <div class="vp-next-event-date" aria-hidden="true">
+          <span class="vp-next-event-day" id="nextEventDay">10</span>
+          <span class="vp-next-event-month" id="nextEventMonth">Jan</span>
+        </div>
+        <div class="vp-next-event-text">
+          <p class="vp-section-label mb-1">
+            <i class="bi bi-calendar-event-fill me-1" aria-hidden="true"></i>
+            Next event <span class="vp-next-event-countdown" id="nextEventCountdown"></span>
+          </p>
+          <h2 id="h-next-event" class="vp-next-event-title">
+            <span id="nextEventTitle">The Royal Ceremony of January</span>
+          </h2>
+          <p class="vp-next-event-desc" id="nextEventDesc">
+            Every 10 January, King Ayolomi Laté II gathers the ten villages of
+            Possotomè for the National Vodun Festival.
+          </p>
+        </div>
+        <a id="nextEventLink" href="life.html#royal-ceremony" class="vp-btn-outline vp-next-event-btn">
+          Learn more <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p class="vp-next-event-more">
+        <a href="life.html#agenda">See the full yearly agenda <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
        PRÉSENTATION
        ============================================ -->
   <section class="vp-section-intro" aria-labelledby="h-about">
@@ -334,6 +370,79 @@
 
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Prochain événement : choisit le rendez-vous le plus proche selon la date du jour -->
+  <script>
+    (function () {
+      // Chaque événement sait calculer sa prochaine date à partir d'une année.
+      var events = [
+        {
+          title: 'The Royal Ceremony of January',
+          desc: 'Every 10 January, King Ayolomi Laté II gathers the ten villages of Possotomè for the National Vodun Festival.',
+          link: 'life.html#royal-ceremony',
+          month: 'Jan',
+          day: '10',
+          next: function (y) { return new Date(y, 0, 10); }
+        },
+        {
+          title: 'The Festival Awilé',
+          desc: 'In February, Possotomè honours Awilé, the goddess of Lake Ahémé, with Zandro dances on the eve and a grand ceremony on the shore.',
+          link: 'life.html#awile',
+          month: 'Feb',
+          day: '',
+          // Le jour exact varie : on se base sur le 1er février.
+          next: function (y) { return new Date(y, 1, 1); },
+          lastDay: function (y) { return new Date(y, 2, 0); }
+        },
+        {
+          title: 'CACE cultural evenings',
+          desc: 'Every Sunday evening in August, poetry, dance, music and storytelling take over Possotomè Centre.',
+          link: 'life.html#cace',
+          month: 'Aug',
+          day: '',
+          // Premier dimanche d'août.
+          next: function (y) { var d = new Date(y, 7, 1); return new Date(y, 7, 1 + (7 - d.getDay()) % 7); },
+          lastDay: function (y) { return new Date(y, 8, 0); }
+        }
+      ];
+
+      // Retourne l'événement le plus proche pour une date donnée.
+      function pickNext(today) {
+        today = new Date(today);
+        today.setHours(0, 0, 0, 0);
+        var year = today.getFullYear();
+        var best = null;
+        events.forEach(function (ev) {
+          var start = ev.next(year);
+          var end = ev.lastDay ? ev.lastDay(year) : start;
+          // Événement en cours ? On le garde avec 0 jour d'attente.
+          if (today >= start && today <= end) {
+            if (!best || best.wait > 0) best = { ev: ev, date: start, wait: 0 };
+            return;
+          }
+          if (start < today) start = ev.next(year + 1);
+          var wait = Math.round((start - today) / 86400000);
+          if (!best || wait < best.wait) best = { ev: ev, date: start, wait: wait };
+        });
+        return best;
+      }
+      window.vpPickNextEvent = pickNext;
+
+      var best = pickNext(new Date());
+      if (!best) return;
+      var ev = best.ev;
+      document.getElementById('nextEventTitle').textContent = ev.title;
+      document.getElementById('nextEventDesc').textContent = ev.desc;
+      document.getElementById('nextEventLink').href = ev.link;
+      document.getElementById('nextEventMonth').textContent = ev.month;
+      document.getElementById('nextEventDay').textContent = ev.day || String(best.date.getFullYear());
+
+      var cd = document.getElementById('nextEventCountdown');
+      if (best.wait === 0) cd.textContent = '· happening now';
+      else if (best.wait === 1) cd.textContent = '· tomorrow';
+      else cd.textContent = '· in ' + best.wait + ' days';
+    })();
+  </script>
 
 </body>
 </html>
