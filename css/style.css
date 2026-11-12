@@ -1929,7 +1929,7 @@ main:has(.vp-visit-cta) + footer {
 }
 
 /* Les ancres de la page ne se cachent pas sous la navbar */
-#getting-there, #when, #stay, #do, #guides, #eco-ferme, #etiquette {
+#getting-there, #when, #stay, #do, #eat, #guides, #eco-ferme, #etiquette {
   scroll-margin-top: 80px;
 }
 
