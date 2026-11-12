@@ -3,228 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn about community life, youth initiatives, culture and local development projects in Possotomè, Benin.">
-  <meta property="og:title" content="Possotomè Life">
-  <meta property="og:description" content="Discover the vibrant community life in Possotomè, Benin.">
-  <meta property="og:image" content="https://visitpossotome.com/img/possotome-cover.jpg">
-  <meta property="og:url" content="https://visitpossotome.com/life.html">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://visitpossotome.com/life.html">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Visit Possotome" />
-  <link rel="manifest" href="/site.webmanifest" />
   <title>Community Life | Visit Possotomè</title>
-  
-  <!-- Bootstrap 5 -->
+  <meta name="description" content="Learn about community life, youth initiatives (UJAP, CACE, ADESCAP), the ten villages, the Festival Awilé and local development in Possotomè, Benin.">
+  <meta name="theme-color" content="#185FA5">
+  <link rel="canonical" href="https://visitpossotome.com/life">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visit Possotomè">
+  <meta property="og:title" content="Possotomè Life | Culture & Community">
+  <meta property="og:description" content="Discover the vibrant community life in Possotomè, Benin: youth organisations, ten villages, festivals and traditions.">
+  <meta property="og:url" content="https://visitpossotome.com/life">
+  <meta property="og:image" content="https://visitpossotome.com/img/possotome-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icônes -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Visit Possotomè">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Polices + Bootstrap 5 + notre CSS unique -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Notre CSS unique -->
   <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    .vp-page-hero {
-      background: linear-gradient(
-        to bottom,
-        rgba(12, 68, 124, 0.55) 0%,
-        rgba(12, 68, 124, 0.78) 100%
-      ),
-      linear-gradient(135deg, #0C447C 0%, #185FA5 60%, #7BBFE0 100%);
-      padding: 6rem 1rem 4rem;
-      text-align: center;
-      color: var(--blanc);
+  <!-- Données structurées : les deux événements annuels -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Festival Awilé",
+      "description": "Annual ceremony dedicated to Awilé, the goddess of Lake Ahémé. Held every February in Possotomè, Benin.",
+      "eventSchedule": { "@type": "Schedule", "repeatFrequency": "P1Y", "byMonth": 2 },
+      "location": {
+        "@type": "Place",
+        "name": "Possotomè",
+        "address": { "@type": "PostalAddress", "addressLocality": "Possotomè", "addressRegion": "Mono", "addressCountry": "BJ" }
+      },
+      "image": "https://visitpossotome.com/img/awile1.jpg",
+      "url": "https://visitpossotome.com/life"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Royal Ceremony of January 10",
+      "description": "Every 10 January, King Ayolomi Laté II gathers the ten villages of Possotomè for the National Vodun Festival.",
+      "eventSchedule": { "@type": "Schedule", "repeatFrequency": "P1Y", "byMonth": 1, "byMonthDay": 10 },
+      "location": {
+        "@type": "Place",
+        "name": "Possotomè",
+        "address": { "@type": "PostalAddress", "addressLocality": "Possotomè", "addressRegion": "Mono", "addressCountry": "BJ" }
+      },
+      "image": "https://visitpossotome.com/img/posso.jpg",
+      "url": "https://visitpossotome.com/life"
     }
-
-    .vp-page-hero h1 {
-      color: var(--blanc);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      margin-bottom: 1rem;
-    }
-
-    .vp-page-hero p {
-      color: rgba(255,255,255,0.85);
-      font-size: 1.05rem;
-      max-width: 580px;
-      margin: 0 auto;
-    }
-
-    .vp-person-card {
-      background: var(--blanc);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 24px rgba(12, 68, 124, 0.10);
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-
-    .vp-person-photo {
-      width: 180px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      flex-shrink: 0;
-      border: 4px solid var(--bleu-clair);
-    }
-
-    .vp-person-photo-placeholder {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background-color: var(--bleu-clair);
-      border: 4px solid var(--bleu-moyen);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      flex-shrink: 0;
-      color: var(--bleu-profond);
-    }
-
-    .vp-person-text h3 {
-      font-size: 1.3rem;
-      color: var(--bleu-profond);
-      margin-bottom: 0.2rem;
-    }
-
-    .vp-role-title {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--bleu-moyen);
-      margin-bottom: 1rem;
-    }
-
-    .vp-person-text p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.8;
-      font-style: italic;
-    }
-
-    .vp-section-ujap {
-      background-color: var(--bleu-tres-clair);
-      padding: 5rem 0;
-    }
-
-    .vp-ujap-icon {
-      width: 56px;
-      height: 56px;
-      background-color: var(--bleu-principal);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--blanc);
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .vp-section-villages {
-      background-color: var(--blanc);
-      padding: 5rem 0;
-    }
-
-    .vp-village-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--bleu-tres-clair);
-      border: 1px solid var(--bleu-clair);
-      border-radius: 8px;
-      padding: 0.6rem 1rem;
-      font-size: 0.88rem;
-      color: var(--bleu-profond);
-      font-weight: 400;
-      width: 100%;
-      margin-bottom: 0.5rem;
-    }
-
-    .vp-village-badge i {
-      color: var(--bleu-moyen);
-      font-size: 0.9rem;
-    }
-
-    .vp-language-pill {
-      display: inline-block;
-      background-color: var(--bleu-principal);
-      color: var(--blanc);
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 0.45rem 1.2rem;
-      border-radius: 50px;
-      margin: 0.25rem;
-    }
-
-    .vp-section-events {
-      background-color: var(--bleu-tres-clair);
-      padding: 5rem 0;
-    }
-
-    .vp-event-card {
-      background: var(--blanc);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 3px 16px rgba(12, 68, 124, 0.09);
-      height: 100%;
-    }
-
-    .vp-event-header {
-      background: linear-gradient(135deg, var(--bleu-principal), var(--bleu-profond));
-      padding: 2rem 1.5rem 1.5rem;
-      color: var(--blanc);
-    }
-
-    .vp-event-header .mois {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--bleu-clair);
-      margin-bottom: 0.4rem;
-    }
-
-    .vp-event-header h3 {
-      color: var(--blanc);
-      font-size: 1.2rem;
-      margin: 0;
-    }
-
-    .vp-event-body {
-      padding: 1.5rem;
-    }
-
-    .vp-event-body p {
-      font-size: 0.92rem;
-      color: #555;
-      line-height: 1.8;
-      margin: 0;
-    }
-
-    @media (max-width: 576px) {
-      .vp-person-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-    }
-  </style>
+  ]
+  </script>
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ============================================
        NAVBAR
        ============================================ -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="img/logo.svg"
-         alt="Visit Possotomè Logo"
-         class="logo-img">
+        <img src="img/logo.svg" alt="Visit Possotomè" class="logo-img" width="220" height="60">
       </a>
       <button class="navbar-toggler" type="button"
               data-bs-toggle="collapse"
@@ -236,27 +93,21 @@
       </button>
       <div class="collapse navbar-collapse" id="menuPrincipal">
         <ul class="navbar-nav ms-auto gap-1">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="life.html">Possotomè Life</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="life.html">Possotomè Life</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- ============================================
        EN-TÊTE DE PAGE
        ============================================ -->
-  <div class="vp-page-hero">
+  <header class="vp-page-hero">
     <span class="vp-tag mb-3 d-inline-block">Culture & Community</span>
     <h1>Possotomè Life</h1>
     <p>
@@ -264,23 +115,23 @@
       their traditions, their languages, their celebrations and their vision
       for the future.
     </p>
-  </div>
+  </header>
 
   <!-- ============================================
        1. LE CHEF DE L'ARRONDISSEMENT
        ============================================ -->
-  <section class="vp-section" style="background-color: var(--blanc);">
+  <section class="vp-section vp-section-white" aria-labelledby="h-leadership">
     <div class="container">
 
       <div class="vp-section-header">
         <p class="vp-section-label">Leadership</p>
-        <h2>A word from the Head of Possotomè</h2>
+        <h2 id="h-leadership">A word from the Head of Possotomè</h2>
       </div>
 
       <div class="vp-person-card">
         <img src="img/marcel.jpg"
-             alt="Marcel Sossou, Chef de l'arrondissement de Possotomè"
-             class="vp-person-photo">
+             alt="Marcel Sossou, Head of the Possotomè arrondissement, wearing the Beninese sash"
+             class="vp-person-photo" width="180" height="200">
         <div class="vp-person-text">
           <h3>Marcel Sossou</h3>
           <div class="vp-role-title">
@@ -304,7 +155,7 @@
   <!-- ============================================
        2. L'UJAP + ADESCAP
        ============================================ -->
-  <section class="vp-section-ujap">
+  <section class="vp-section-ujap" aria-labelledby="h-ujap">
     <div class="container">
 
       <div class="row align-items-start g-5">
@@ -312,13 +163,10 @@
         <!-- Texte UJAP -->
         <div class="col-lg-7">
           <p class="vp-section-label">Youth & Community</p>
-          <img src="img/ujap.jpg" alt="UJAP Possotomè"
-               style="width:100%; height:260px;
-                      object-fit:cover;
-                      object-position:top;
-                      border-radius:8px;
-                      margin-bottom:1.2rem;">
-          <h2>UJAP (Union des Jeunes de l'Arrondissement de Possotomè)</h2>
+          <img src="img/ujap.jpg" alt="Members of the UJAP in front of the youth centre in Possotomè"
+               class="vp-img-cover vp-img-h260 vp-img-top vp-rounded vp-mb"
+               loading="lazy" decoding="async">
+          <h2 id="h-ujap">UJAP (Union des Jeunes de l'Arrondissement de Possotomè)</h2>
           <p>
             Founded in 1999, the UJAP was created to serve as a forum
             where young people from all ten villages could discuss issues
@@ -343,9 +191,8 @@
             Association Un Regard vers le Sud, and the JCI, each
             partnership strengthening its capacity to serve.
           </p>
-          <p style="font-size:0.88rem; color:#888; margin-top:0.5rem;">
-            <i class="bi bi-geo-alt-fill me-1"
-               style="color:var(--bleu-moyen);"></i>
+          <p class="vp-location-note">
+            <i class="bi bi-geo-alt-fill me-1 vp-icon-accent" aria-hidden="true"></i>
             Based at <strong>Centre Zabalki</strong> the Youth Centre
             of Possotomè, near the main crossroads, across from the
             Possotomè Health Centre.
@@ -356,115 +203,51 @@
         <div class="col-lg-5">
           <div class="row g-3">
             <div class="col-6">
-              <div class="vp-card" style="padding:1.4rem; text-align:center;">
-                <div class="vp-ujap-icon mx-auto">
-                  <i class="bi bi-people-fill"></i>
-                </div>
-                <h5 style="font-size:0.95rem;">Community events</h5>
-                <p style="font-size:0.82rem; margin:0;">
-                  Recreational days and solidarity initiatives
-                  across all villages.
-                </p>
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
+                <h5>Community events</h5>
+                <p>Recreational days and solidarity initiatives across all villages.</p>
               </div>
             </div>
             <div class="col-6">
-              <div class="vp-card" style="padding:1.4rem; text-align:center;">
-                <div class="vp-ujap-icon mx-auto">
-                  <i class="bi bi-book-fill"></i>
-                </div>
-                <h5 style="font-size:0.95rem;">Education support</h5>
-                <p style="font-size:0.82rem; margin:0;">
-                  Holiday courses and exam support since 1999.
-                </p>
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-book-fill" aria-hidden="true"></i></div>
+                <h5>Education support</h5>
+                <p>Holiday courses and exam support since 1999.</p>
               </div>
             </div>
             <div class="col-6">
-              <div class="vp-card" style="padding:1.4rem; text-align:center;">
-                <div class="vp-ujap-icon mx-auto">
-                  <i class="bi bi-trophy-fill"></i>
-                </div>
-                <h5 style="font-size:0.95rem;">Sports activities</h5>
-                <p style="font-size:0.82rem; margin:0;">
-                  The annual Solidarity Tournament uniting
-                  all ten villages.
-                </p>
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-trophy-fill" aria-hidden="true"></i></div>
+                <h5>Sports activities</h5>
+                <p>The annual Solidarity Tournament uniting all ten villages.</p>
               </div>
             </div>
             <div class="col-6">
-              <div class="vp-card" style="padding:1.4rem; text-align:center;">
-                <div class="vp-ujap-icon mx-auto">
-                  <i class="bi bi-lightbulb-fill"></i>
-                </div>
-                <h5 style="font-size:0.95rem;">Skills & training</h5>
-                <p style="font-size:0.82rem; margin:0;">
-                  Entrepreneurship, digital skills and
-                  sanitation campaigns.
-                </p>
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i></div>
+                <h5>Skills & training</h5>
+                <p>Entrepreneurship, digital skills and sanitation campaigns.</p>
               </div>
             </div>
           </div>
 
-          <!-- Timeline présidents -->
-          <div class="vp-card mt-3" style="padding:1.4rem;">
-            <h5 style="font-size:0.95rem; color:var(--bleu-profond);
-                       margin-bottom:1rem;">
-              <i class="bi bi-person-badge-fill me-2"
-                 style="color:var(--bleu-moyen);"></i>
+          <!-- Liste des présidents -->
+          <div class="vp-card vp-card-padded mt-3">
+            <h5 class="vp-presidents-title">
+              <i class="bi bi-person-badge-fill me-2 vp-icon-accent" aria-hidden="true"></i>
               Presidents since 1999
             </h5>
-            <div style="font-size:0.82rem; line-height:2;">
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Akodjinou Gustave</span>
-                <span style="color:var(--bleu-moyen);">1999-2003</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Gbèlèmè Michel</span>
-                <span style="color:var(--bleu-moyen);">2003-2005</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Kpohonsito Ignace</span>
-                <span style="color:var(--bleu-moyen);">2005-2009</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Sagbo Martin</span>
-                <span style="color:var(--bleu-moyen);">2009-2011</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Madokpon Armand</span>
-                <span style="color:var(--bleu-moyen);">2011-2013</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Anato Rémy</span>
-                <span style="color:var(--bleu-moyen);">2013-2015</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Sossou Marcel</span>
-                <span style="color:var(--bleu-moyen);">2015-2021</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;
-                          border-bottom:1px solid var(--bleu-clair);
-                          padding-bottom:0.2rem;">
-                <span>Tchakpali Mauriac</span>
-                <span style="color:var(--bleu-moyen);">2021-2025</span>
-              </div>
-              <div style="display:flex; justify-content:space-between;">
-                <span><strong>Houédanou Elysée</strong></span>
-                <span style="color:var(--bleu-moyen);">2025-present</span>
-              </div>
+            <div class="vp-presidents">
+              <div class="vp-president-row"><span>Akodjinou Gustave</span><span class="vp-president-years">1999-2003</span></div>
+              <div class="vp-president-row"><span>Gbèlèmè Michel</span><span class="vp-president-years">2003-2005</span></div>
+              <div class="vp-president-row"><span>Kpohonsito Ignace</span><span class="vp-president-years">2005-2009</span></div>
+              <div class="vp-president-row"><span>Sagbo Martin</span><span class="vp-president-years">2009-2011</span></div>
+              <div class="vp-president-row"><span>Madokpon Armand</span><span class="vp-president-years">2011-2013</span></div>
+              <div class="vp-president-row"><span>Anato Rémy</span><span class="vp-president-years">2013-2015</span></div>
+              <div class="vp-president-row"><span>Sossou Marcel</span><span class="vp-president-years">2015-2021</span></div>
+              <div class="vp-president-row"><span>Tchakpali Mauriac</span><span class="vp-president-years">2021-2025</span></div>
+              <div class="vp-president-row"><span><strong>Houédanou Elysée</strong></span><span class="vp-president-years">2025-present</span></div>
             </div>
           </div>
 
@@ -477,20 +260,14 @@
           <div class="vp-card">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/adescap2.jpg" alt="ADESCAP Possotomè"
-                     style="width:100%; height:100%; min-height:260px;
-                            object-fit:cover; object-position:center;
-                            border-radius:10px 0 0 10px;">
+                <img src="img/adescap2.jpg" alt="ADESCAP members gathered in Possotomè"
+                     class="vp-adescap-img" loading="lazy" decoding="async">
               </div>
               <div class="col-md-8">
-                <div style="padding:2rem; height:100%;
-                            display:flex; flex-direction:column;
-                            justify-content:center;">
-                  <span class="vp-tag">
-                    Community development — Senior organisation
-                  </span>
-                  <h3 style="margin-top:0.6rem;">ADESCAP</h3>
-                  <p style="font-size:0.92rem; color:#555; line-height:1.8;">
+                <div class="vp-adescap-text">
+                  <span class="vp-tag">Community development — Senior organisation</span>
+                  <h3>ADESCAP</h3>
+                  <p>
                     The senior counterpart of the UJAP,
                     <strong>ADESCAP</strong> (Association pour le
                     Développement Économique, Social et Culturel de
@@ -516,178 +293,146 @@
   </section>
 
   <!-- ============================================
-     CACE — Culture & Youth
-     ============================================ -->
-<section class="vp-section" style="background-color: var(--blanc); padding-bottom: 1rem;">
-  <div class="container">
+       3. CACE — Culture & Youth
+       ============================================ -->
+  <section class="vp-section vp-section-white pb-3" aria-labelledby="h-cace">
+    <div class="container">
 
-    <div class="vp-section-header">
-      <p class="vp-section-label">Youth & Culture</p>
-      <h2>CACE (Cercle des Amis de la Culture et de l'Épanouissement)</h2>
-      <p style="max-width:680px; margin: 0.8rem auto 0; color:#666; font-size:0.95rem;">
-        Every summer since August 2015, Possotomè comes alive on Sunday evenings
-        with poetry, dance, music and storytelling — a celebration of culture
-        that lights up the community until late into the night.
-      </p>
-    </div>
-
-    <div class="row g-4 align-items-start">
-
-      <!-- Texte -->
-      <div class="col-lg-6">
-        <p>
-          Born from the energy of Possotomè's youth organisations, <strong>CACE</strong>
-          organises each year between August and September, a month-long cultural
-          programme that transforms the town every Sunday evening. Readings, poetry,
-          vocal and instrumental interpretation, choreography and folkloric performances
-          fill the nights with colour and sound, giving young people a stage to express
-          themselves and celebrate their identity.
+      <div class="vp-section-header">
+        <p class="vp-section-label">Youth & Culture</p>
+        <h2 id="h-cace">CACE (Cercle des Amis de la Culture et de l'Épanouissement)</h2>
+        <p class="vp-section-sub">
+          Every summer since August 2015, Possotomè comes alive on Sunday evenings
+          with poetry, dance, music and storytelling — a celebration of culture
+          that lights up the community until late into the night.
         </p>
-        <p>
-          The event is supported by the local municipality, ADESCAP, Radio FM Ahémé and community
-          volunteers who believe in the power of culture as a driver of development.
-          Alongside the UJAP's holiday courses and the youth radio programme on
-          Radio Ahémé FM, CACE is one of the pillars that keeps young people
-          whether they stayed or came home for the holidays, engaged,
-          inspired and connected to their roots.
-        </p>
-        <p>
-          What began as an initiative has grown into one of Possotomè's most
-          anticipated annual events, now serving as the cultural arm of the UJAP.
-          Each edition owes its success in large part to its two signature hosts
-          who share the stage year after year:
-          <strong>Prevert Djossou</strong> and <strong>Djahou Oke</strong>.
-        </p>
-
-        <!-- Hommage -->
-        <div style="background: var(--bleu-tres-clair);
-                    border-left: 4px solid var(--bleu-moyen);
-                    border-radius: 0 8px 8px 0;
-                    padding: 1.2rem 1.5rem;
-                    margin-top: 1rem;">
-          <p style="font-size:0.88rem; color:#555; margin:0; line-height:1.8; font-style:italic;">
-            <i class="bi bi-star-fill me-2" style="color:var(--bleu-moyen);"></i>
-            We pay tribute to <strong>Parfait Davah</strong>, founding president
-            of CACE and one of its most devoted champions, who passed away and
-            left behind a legacy of cultural engagement and commitment to the
-            development of Possotomè. His spirit lives on in every edition
-            of this event.
-          </p>
-        </div>
-
-        <!-- Fondateurs -->
-        <div style="margin-top:1.5rem;">
-          <p class="vp-section-label" style="margin-bottom:0.6rem;">
-            Founding members
-          </p>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="vp-language-pill">Parfait Davah †</span>
-            <span class="vp-language-pill">Olivier Kpohonsito</span>
-            <span class="vp-language-pill">Narcisse Kpohonsito</span>
-            <span class="vp-language-pill">Pacôme Zounmabou</span>
-            <span class="vp-language-pill">Aristide Houngbo</span>
-            <span class="vp-language-pill">Arnaud Tossavi</span>
-            <span class="vp-language-pill">Djahou Oke</span>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Photos -->
-      <div class="col-lg-6">
-        <div class="row g-3">
+      <div class="row g-4 align-items-start">
 
-          <div class="col-6">
-            <div class="vp-card">
-              <img src="img/cace.jpg" alt="CACE Possotomè"
-                     style="width:100%;height:200px;object-fit:cover;">
-              <div class="vp-card-body">
-                <p style="font-size:0.82rem; color:#666; margin:0;">
-                  CACE event Recap Flyer
-                </p>
-              </div>
-            </div>
+        <!-- Texte -->
+        <div class="col-lg-6">
+          <p>
+            Born from the energy of Possotomè's youth organisations, <strong>CACE</strong>
+            organises each year between August and September, a month-long cultural
+            programme that transforms the town every Sunday evening. Readings, poetry,
+            vocal and instrumental interpretation, choreography and folkloric performances
+            fill the nights with colour and sound, giving young people a stage to express
+            themselves and celebrate their identity.
+          </p>
+          <p>
+            The event is supported by the local municipality, ADESCAP, Radio FM Ahémé and community
+            volunteers who believe in the power of culture as a driver of development.
+            Alongside the UJAP's holiday courses and the youth radio programme on
+            Radio Ahémé FM, CACE is one of the pillars that keeps young people
+            whether they stayed or came home for the holidays, engaged,
+            inspired and connected to their roots.
+          </p>
+          <p>
+            What began as an initiative has grown into one of Possotomè's most
+            anticipated annual events, now serving as the cultural arm of the UJAP.
+            Each edition owes its success in large part to its two signature hosts
+            who share the stage year after year:
+            <strong>Prevert Djossou</strong> and <strong>Djahou Oke</strong>.
+          </p>
+
+          <!-- Hommage -->
+          <div class="vp-note">
+            <p>
+              <i class="bi bi-star-fill me-2 vp-icon-accent" aria-hidden="true"></i>
+              We pay tribute to <strong>Parfait Davah</strong>, founding president
+              of CACE and one of its most devoted champions, who passed away and
+              left behind a legacy of cultural engagement and commitment to the
+              development of Possotomè. His spirit lives on in every edition
+              of this event.
+            </p>
           </div>
 
-          <div class="col-6">
-            <div class="vp-card">
-              <img src="img/chore.jpg" alt="CACE chorégraphie"
-                     style="width:100%;height:200px;object-fit:cover;">
-              <div class="vp-card-body">
-                <p style="font-size:0.82rem; color:#666; margin:0;">
-                  Choreography & folkloric performance
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="vp-card">
-              <img src="img/cace1.jpg" alt="CACE coordination team"
-                     style="width:100%;height:200px;object-fit:cover;">
-              <div class="vp-card-body">
-                <p style="font-size:0.82rem; color:#666; margin:0;">
-                  CACE coordination team, the heart of the event's organisation
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-6">
-            <div class="vp-card">
-              <img src="img/audience.jpg" alt="The audience"
-                     style="width:100%;height:200px;object-fit:cover;">
-              <div class="vp-card-body">
-                <p style="font-size:0.82rem; color:#666; margin:0;">
-                  The audience — every Sunday evening in August
-                </p>
-              </div>
+          <!-- Fondateurs -->
+          <div class="mt-4">
+            <p class="vp-section-label mb-2">Founding members</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="vp-language-pill">Parfait Davah †</span>
+              <span class="vp-language-pill">Olivier Kpohonsito</span>
+              <span class="vp-language-pill">Narcisse Kpohonsito</span>
+              <span class="vp-language-pill">Pacôme Zounmabou</span>
+              <span class="vp-language-pill">Aristide Houngbo</span>
+              <span class="vp-language-pill">Arnaud Tossavi</span>
+              <span class="vp-language-pill">Djahou Oke</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Dates -->
-        <div class="vp-card mt-3" style="padding:1.2rem;">
-          <div class="d-flex align-items-center gap-3">
-            <i class="bi bi-calendar-event-fill"
-               style="font-size:1.4rem; color:var(--bleu-moyen);"></i>
-            <div>
-              <strong style="color:var(--bleu-profond);">
-                Every August-September since 2015
-              </strong><br>
-              <span style="font-size:0.85rem; color:#888;">
-                Sunday evenings — Possotomè Centre
-              </span>
+        <!-- Photos -->
+        <div class="col-lg-6">
+          <div class="row g-3">
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="img/cace.jpg" alt="CACE event recap flyer"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>CACE event Recap Flyer</p></div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="img/chore.jpg" alt="Dancers performing a folkloric choreography at a CACE evening"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>Choreography & folkloric performance</p></div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="img/cace1.jpg" alt="CACE coordination team"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>CACE coordination team, the heart of the event's organisation</p></div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="img/audience.jpg" alt="The audience at a CACE Sunday evening"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>The audience — every Sunday evening in August</p></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dates -->
+          <div class="vp-card vp-date-card mt-3">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-calendar-event-fill" aria-hidden="true"></i>
+              <div>
+                <strong>Every August-September since 2015</strong><br>
+                <span>Sunday evenings — Possotomè Centre</span>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Bande de séparation -->
+  <div class="vp-divider-band" aria-hidden="true">
+    <i class="bi bi-water"></i>
   </div>
-</section>
-
-<!-- Bande de séparation -->
-<div style="background-color: var(--bleu-clair);
-            padding: 1.2rem 0;
-            text-align: center;">
-  <i class="bi bi-water" 
-     style="color: var(--bleu-principal); 
-            font-size: 1.4rem; 
-            opacity: 0.6;"></i>
-</div>
 
   <!-- ============================================
-       3. VILLAGES, ETHNIES ET LANGUES
+       4. VILLAGES, ETHNIES ET LANGUES
        ============================================ -->
-  <section class="vp-section-villages">
+  <section class="vp-section-villages" aria-labelledby="h-villages">
     <div class="container">
 
       <div class="vp-section-header">
         <p class="vp-section-label">Identity & Territory</p>
-        <h2>Ten villages, one arrondissement</h2>
-        <p style="max-width:580px; margin: 0.8rem auto 0; color:#666; font-size:0.95rem;">
+        <h2 id="h-villages">Ten villages, one arrondissement</h2>
+        <p class="vp-section-sub">
           Under the traditional authority of King Ayolomi Laté, the ten villages
           of Possotomè each carry their own identity, festivals and customs,
           united by the shores of Lake Ahémé and a shared sense of belonging.
@@ -698,51 +443,28 @@
 
         <!-- Les 10 villages -->
         <div class="col-lg-6">
-          <h3 style="font-size:1.15rem; margin-bottom:1.2rem; color:var(--bleu-profond);">
-            <i class="bi bi-geo-fill me-2" style="color:var(--bleu-moyen);"></i>
+          <h3 class="vp-subheading">
+            <i class="bi bi-geo-fill me-2 vp-icon-accent" aria-hidden="true"></i>
             The ten villages
           </h3>
           <div class="row g-1">
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Sehomi Kogbomè</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Sehomi Dato</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Gbèdjèwa</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Wocomey</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Zinhouegoh</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Ouassa-Kpodji</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Ouassa-Tokpa</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Possotomè Centre</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Hounnontin</div>
-            </div>
-            <div class="col-6">
-              <div class="vp-village-badge"><i class="bi bi-house-fill"></i> Akokponawa</div>
-            </div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Sehomi Kogbomè</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Sehomi Dato</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Gbèdjèwa</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Wocomey</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Zinhouegoh</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Ouassa-Kpodji</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Ouassa-Tokpa</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Possotomè Centre</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Hounnontin</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Akokponawa</div></div>
           </div>
 
           <!-- Langues -->
-          <div style="margin-top:1.5rem; border-top:1px solid var(--bleu-clair); padding-top:1rem;">
+          <div class="vp-languages">
             <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-chat-dots-fill" style="color:var(--bleu-moyen);"></i>
-              <strong style="font-size:0.82rem; letter-spacing:0.1em;
-                             text-transform:uppercase; color:#888;">
-                Languages spoken
-              </strong>
+              <i class="bi bi-chat-dots-fill vp-icon-accent" aria-hidden="true"></i>
+              <strong class="vp-languages-label">Languages spoken</strong>
             </div>
             <div>
               <span class="vp-language-pill">Sahouè</span>
@@ -757,45 +479,29 @@
 
         <!-- Le roi -->
         <div class="col-lg-6">
-          <div class="vp-card" style="padding:1.5rem;">
+          <div class="vp-card vp-king-card">
             <div class="d-flex align-items-center gap-3 mb-2">
-              <i class="bi bi-stars" style="font-size:1.4rem; color:var(--bleu-moyen);"></i>
-              <h3 style="font-size:1.05rem; margin:0;">Traditional Authority</h3>
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              <h3>Traditional Authority</h3>
             </div>
             <div class="d-flex align-items-center gap-3 mb-3">
               <img src="img/ajolomi.jpg"
-                   alt="Roi Ayolomi Laté II, chef traditionnel de Possotomè"
-                   style="width:190px; height:190px;
-                          border-radius:50%;
-                          object-fit:cover;
-                          object-position:center top;
-                          border:3px solid var(--bleu-clair);
-                          flex-shrink:0;">
-                          
+                   alt="King Ayolomi Laté II, traditional king of Possotomè"
+                   class="vp-king-photo" loading="lazy" decoding="async">
               <div>
-                <strong style="color:var(--bleu-profond); font-size:0.95rem;">
-                  Roi Ayolomi Laté II
-                </strong><br>
-                <span style="font-size:0.78rem; color:var(--bleu-moyen);
-                             text-transform:uppercase; letter-spacing:0.1em;">
-                  Traditional King of Possotomè
-                </span>
-
-                <div style="margin-top:10px; font-size:0.8rem;">
-
-               <p class="image-credit">
+                <strong class="vp-king-name">Roi Ayolomi Laté II</strong><br>
+                <span class="vp-king-title">Traditional King of Possotomè</span>
+                <p class="image-credit">
                   Photo courtesy of
                   <a href="https://musicafricawakemedia.wordpress.com/2024/11/10/africa-global-peace-summit-presents-the-bio-of-hrh-anagonou-late-ayolomi-ii-of-possotome-benin-republic/"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                     target="_blank" rel="noopener noreferrer">
                     Africa Global Peace Summit
-                    <i class="bi bi-box-arrow-up-right"></i>
+                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                   </a>
                 </p>
-                </div>            
               </div>
             </div>
-            <p style="font-size:0.92rem; color:#555; margin:0; line-height:1.8;">
+            <p>
               King <strong>Ayolomi Laté</strong> is the traditional chief who oversees
               the cultural and spiritual life of the arrondissement, ensuring
               that the ancestral heritage of all ten villages is preserved
@@ -809,15 +515,15 @@
   </section>
 
   <!-- ============================================
-       4. ÉVÉNEMENTS CULTURELS
+       5. ÉVÉNEMENTS CULTURELS
        ============================================ -->
-  <section class="vp-section-events">
+  <section class="vp-section-events" aria-labelledby="h-events">
     <div class="container">
 
       <div class="vp-section-header">
         <p class="vp-section-label">Cultural life</p>
-        <h2>Celebrations that define Possotomè</h2>
-        <p style="max-width:560px; margin: 0.8rem auto 0; color:#666; font-size:0.95rem;">
+        <h2 id="h-events">Celebrations that define Possotomè</h2>
+        <p class="vp-section-sub">
           Two events above all others mark the rhythm of life in Possotomè,
           one ancient, one reborn, both deeply rooted in the community's identity.
         </p>
@@ -827,20 +533,16 @@
 
         <!-- Festival Awilé -->
         <div class="col-md-6">
-          <div class="vp-event-card">
+          <article class="vp-event-card">
             <div class="vp-event-header">
               <div class="mois">
-                <i class="bi bi-calendar3 me-1"></i> February, annual
+                <i class="bi bi-calendar3 me-1" aria-hidden="true"></i> February, annual
               </div>
               <h3>The Festival Awilé</h3>
             </div>
             <div class="vp-event-body">
-              <img src="img/awile 1.jpg" alt="Festival Awilé Possotomè"
-                   style="width:100%; 
-                   height:180px; 
-                   object-fit:cover;
-                   border-radius:8px; 
-                   margin-bottom:1rem;">
+              <img src="img/awile1.jpg" alt="Crowd gathered on the shores of Lake Ahémé for the Festival Awilé"
+                   class="vp-img-cover vp-img-h180 vp-rounded" loading="lazy" decoding="async">
               <p>
                 <strong>What is Awilé?</strong> In the rich tapestry
                 of Beninese spirituality, Awilé is a powerful goddess
@@ -858,32 +560,28 @@
                 when the dances and songs of Zandro fill the air,
                 announcing what is to come.
               </p>
-              <p style="margin-top:0.8rem;">
+              <p>
                 Historians trace this ceremony as one of the ancestors of
                 South American carnivals, its rhythms and dances carried
                 across the Atlantic by enslaved people who kept the tradition
                 alive in Brazil, Haiti and Trinidad.
               </p>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Fête du 10 janvier -->
         <div class="col-md-6">
-          <div class="vp-event-card">
+          <article class="vp-event-card">
             <div class="vp-event-header">
               <div class="mois">
-                <i class="bi bi-calendar3 me-1"></i> January 10, annual
+                <i class="bi bi-calendar3 me-1" aria-hidden="true"></i> January 10, annual
               </div>
               <h3>The Royal Ceremony of January</h3>
             </div>
             <div class="vp-event-body">
-              <img src="img/posso.jpg" alt="Fête du 10 janvier Possotomè"
-                   style="width:100%; 
-                   height:180px; 
-                   object-fit:cover;
-                    border-radius:8px; 
-                    margin-bottom:1rem;">
+              <img src="img/posso.jpg" alt="Royal ceremony of 10 January in Possotomè"
+                   class="vp-img-cover vp-img-h180 vp-rounded" loading="lazy" decoding="async">
               <p>
                 Every year on January 10th, Benin celebrates the National Vodun
                 Festival. In Possotomè, this date takes on a deeply local dimension,
@@ -891,13 +589,13 @@
                 that brings together the ten villages in a celebration of
                 ancestral spirituality, community bonds and cultural pride.
               </p>
-              <p style="margin-top:0.8rem;">
+              <p>
                 The ceremony is held in a deferred form, giving each village
                 the time to honour the occasion in its own way before joining
                 the collective gathering under the king's authority.
               </p>
             </div>
-          </div>
+          </article>
         </div>
 
       </div>
@@ -905,15 +603,15 @@
   </section>
 
   <!-- ============================================
-       5. PILIERS DE POSSOTOMÈ
+       6. PILIERS DE POSSOTOMÈ
        ============================================ -->
-  <section class="vp-section" style="background-color: var(--blanc);">
+  <section class="vp-section vp-section-white" aria-labelledby="h-pillars">
     <div class="container">
 
       <div class="vp-section-header">
         <p class="vp-section-label">Key institutions & places</p>
-        <h2>The pillars of Possotomè</h2>
-        <p style="max-width:580px; margin: 0.8rem auto 0; color:#666; font-size:0.95rem;">
+        <h2 id="h-pillars">The pillars of Possotomè</h2>
+        <p class="vp-section-sub">
           Behind every thriving community stand institutions and people
           who build, connect and serve. These are the places and organisations
           that have shaped and continue to shape Possotomè.
@@ -924,11 +622,9 @@
 
         <!-- Source thermale -->
         <div class="col-md-6">
-          <div class="vp-card" style="height:100%;">
-            <img src="img/source.jpg" alt="Source thermale de Possotomè"
-                 style="width:100%; height:250px;
-                        object-fit:cover;
-                        object-position:center top;">
+          <article class="vp-card">
+            <img src="img/source.jpg" alt="The thermal spring of Possotomè"
+                 class="vp-img-cover vp-img-h250 vp-img-top" loading="lazy" decoding="async">
             <div class="vp-card-body">
               <span class="vp-tag">Natural heritage</span>
               <h3>The Thermal Springs</h3>
@@ -943,16 +639,14 @@
                 to the world and the world's eyes to Possotomè.
               </p>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Radio Ahémé -->
         <div class="col-md-6">
-          <div class="vp-card" style="height:100%;">
-            <img src="img/aheme2.jpg" alt="Radio Ahémé Possotomè"
-                 style="width:100%; height:250px;
-                        object-fit:cover;
-                        object-position:center;">
+          <article class="vp-card">
+            <img src="img/aheme2.jpg" alt="Radio Ahémé FM building in Possotomè"
+                 class="vp-img-cover vp-img-h250" loading="lazy" decoding="async">
             <div class="vp-card-body">
               <span class="vp-tag">Media & Communication</span>
               <h3>Radio Ahémé</h3>
@@ -968,17 +662,14 @@
                 be heard.
               </p>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Chez Théo -->
         <div class="col-12">
-          <div class="vp-card" style="height:100%;">
-            <img src="img/theo2.jpg" alt="Hôtel Chez Théo Possotomè"
-                 style="width:100%; 
-                 height:300px;
-                 object-fit:cover;
-                 object-position:center;">
+          <article class="vp-card">
+            <img src="img/theo2.jpg" alt="Chez Théo restaurant on stilts over Lake Ahémé"
+                 class="vp-img-cover vp-img-h300" loading="lazy" decoding="async">
             <div class="vp-card-body">
               <span class="vp-tag">Tourism & Hospitality</span>
               <h3>Chez Théo, the pride of Possotomè</h3>
@@ -994,26 +685,23 @@
                 showcase of what Possotomè has to offer the world.
               </p>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Hôtel Village Ahémé -->
         <div class="col-md-6">
-          <div class="vp-card" style="height:100%;">
-            <img src="img/vk1.jpg" alt="Hôtel Village Ahémé"
-                 style="width:100%; height:250px;
-                        object-fit:cover;
-                        object-position:center;">
-                       <p class="image-credit">
-                Photo courtesy of
-                <a href="https://www.tripadvisor.co.nz/Hotel_Review-g293765-d3244621-Reviews-Hotel_Village_Aheme-Porto_Novo_Oueme_Department.html#/media/3244621/?type=ALL_INCLUDING_RESTRICTED&albumid=101&category=101"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Hotel Village Ahémé
-                  <i class="bi bi-box-arrow-up-right"></i>
-                </a>
-              </p>
-                          <div class="vp-card-body">
+          <article class="vp-card">
+            <img src="img/vk1.jpg" alt="Hôtel Village Ahémé, Possotomè"
+                 class="vp-img-cover vp-img-h250" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo courtesy of
+              <a href="https://www.tripadvisor.co.nz/Hotel_Review-g293765-d3244621-Reviews-Hotel_Village_Aheme-Porto_Novo_Oueme_Department.html#/media/3244621/?type=ALL_INCLUDING_RESTRICTED&albumid=101&category=101"
+                 target="_blank" rel="noopener noreferrer">
+                Hotel Village Ahémé
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="vp-card-body">
               <span class="vp-tag">Historic hospitality</span>
               <h3>Hôtel Village Ahémé, a pioneer</h3>
               <p>
@@ -1031,26 +719,22 @@
                 to the shores of Lake Ahémé.
               </p>
             </div>
-          </div>
+          </article>
         </div>
 
         <!-- Eco-Bénin -->
         <div class="col-md-6">
-          <div class="vp-card" style="height:100%;">
-            <img src="img/ecobenin.jpg" alt="Eco-Bénin Possotomè"
-                 style="width:100%; height:250px;
-                        object-fit:cover;
-                        object-position:center;">
-                      <p class="image-credit">
-                Photo courtesy of
-                <a href="https://www.ecobenin.org/possotome/"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Eco-Bénin
-                  <i class="bi bi-box-arrow-up-right"></i>
-                </a>
-              </p>
-                          <div class="vp-card-body">
+          <article class="vp-card">
+            <img src="img/ecobenin.jpg" alt="Eco-Bénin ecotourism site on Lake Ahémé"
+                 class="vp-img-cover vp-img-h250" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo courtesy of
+              <a href="https://www.ecobenin.org/possotome/" target="_blank" rel="noopener noreferrer">
+                Eco-Bénin
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="vp-card-body">
               <span class="vp-tag">Ecotourism</span>
               <h3>Eco-Bénin & Eco-Ferme</h3>
               <p>
@@ -1065,12 +749,14 @@
                 the people who call this place home.
               </p>
             </div>
-          </div>
+          </article>
         </div>
 
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ============================================
        FOOTER
@@ -1089,7 +775,7 @@
   </footer>
 
   <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
 
 </body>
 </html>
