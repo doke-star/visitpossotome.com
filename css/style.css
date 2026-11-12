@@ -1219,7 +1219,7 @@ footer a:hover {
 }
 
 /* Les ancres ne doivent pas se cacher sous la navbar collante */
-#awile, #royal-ceremony, #cace, #agenda, #h-ujap {
+#awile, #royal-ceremony, #cace, #agenda, #h-ujap, #h-pillars {
   scroll-margin-top: 80px;
 }
 
@@ -1598,7 +1598,343 @@ footer a:hover {
 }
 
 /* ------------------------------------------------
-   15. RESPONSIVE
+   15. PAGE VISIT
+   ------------------------------------------------ */
+/* Sommaire sous l'en-tête */
+.vp-visit-jump {
+  background-color: var(--blanc);
+  border-bottom: 1px solid var(--bleu-clair);
+  padding: 0.8rem 0;
+}
+
+.vp-visit-jump ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.vp-visit-jump a {
+  display: inline-block;
+  border: 1px solid var(--bleu-clair);
+  border-radius: 50px;
+  padding: 0.35rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bleu-profond);
+  transition: all 0.2s ease;
+}
+
+.vp-visit-jump a:hover {
+  background-color: var(--bleu-principal);
+  border-color: var(--bleu-principal);
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+/* Carte pratique : icône + titre + texte */
+.vp-visit-card {
+  padding: 1.6rem;
+}
+
+.vp-visit-icon {
+  width: 52px;
+  height: 52px;
+  background-color: var(--bleu-tres-clair);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bleu-principal);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.vp-visit-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.vp-visit-card p {
+  font-size: 0.9rem;
+  color: var(--gris-doux);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.vp-visit-card p + p {
+  margin-top: 0.7rem;
+}
+
+.vp-visit-card strong {
+  color: var(--bleu-profond);
+}
+
+/* Note (derniers kilomètres) */
+.vp-visit-note {
+  margin-top: 2rem;
+}
+
+.vp-visit-note p {
+  font-style: normal;
+}
+
+.vp-visit-note strong {
+  color: var(--bleu-profond);
+}
+
+/* Cartes événement (liens vers la page Life) */
+.vp-visit-event {
+  display: block;
+  padding: 1.4rem;
+  color: var(--gris-doux);
+  border-top: 4px solid var(--bleu-moyen);
+}
+
+.vp-visit-event:hover {
+  text-decoration: none;
+  color: var(--gris-doux);
+}
+
+.vp-visit-event-date {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bleu-moyen);
+  margin-bottom: 0.3rem;
+}
+
+.vp-visit-event strong {
+  display: block;
+  font-family: var(--police-titre);
+  font-size: 1.1rem;
+  color: var(--bleu-profond);
+  margin-bottom: 0.4rem;
+}
+
+.vp-visit-event > span:last-child {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* Carte « à la une » horizontale (Eco-Ferme) */
+.vp-feature-img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.vp-feature .image-credit {
+  margin: 0.4rem 1rem 0.6rem;
+}
+
+.vp-feature-body {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.vp-feature-body h3 {
+  margin-top: 0.6rem;
+}
+
+.vp-feature-body p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Carte mise en avant (bordure bleue) */
+.vp-card-highlight {
+  border: 2px solid var(--bleu-principal);
+}
+
+/* Cartes des guides locaux */
+.vp-guide-card {
+  position: relative;
+  padding: 1.6rem 1.6rem 1.6rem 1.8rem;
+}
+
+.vp-guide-featured {
+  border: 2px solid var(--bleu-principal);
+}
+
+.vp-guide-rank {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--bleu-tres-clair);
+  color: var(--bleu-profond);
+  font-family: var(--police-titre);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vp-guide-featured .vp-guide-rank {
+  background: var(--bleu-principal);
+  color: var(--blanc);
+}
+
+.vp-guide-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  padding-right: 2.5rem;
+}
+
+.vp-guide-role {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bleu-moyen);
+  margin-bottom: 0.8rem;
+}
+
+.vp-guide-card > p {
+  font-size: 0.9rem;
+  color: var(--gris-doux);
+  line-height: 1.7;
+}
+
+.vp-guide-links {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0.8rem 0 0;
+  border-top: 1px solid var(--bleu-clair);
+  font-size: 0.9rem;
+}
+
+.vp-guide-links li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+  overflow-wrap: anywhere;
+}
+
+.vp-guide-links li > i {
+  color: var(--bleu-moyen);
+  flex-shrink: 0;
+}
+
+/* Liste de définitions à deux colonnes (faits pratiques) */
+.vp-facts {
+  display: grid;
+  grid-template-columns: minmax(90px, max-content) 1fr;
+  gap: 0.45rem 1rem;
+  margin: 1rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bleu-clair);
+  font-size: 0.88rem;
+}
+
+.vp-facts dt {
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bleu-moyen);
+  padding-top: 0.15rem;
+}
+
+.vp-facts dd {
+  margin: 0;
+  color: var(--gris-texte);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* Liste de conseils (étiquette) */
+.vp-visit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vp-visit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--bleu-tres-clair);
+  font-size: 0.92rem;
+  color: var(--gris-doux);
+  line-height: 1.7;
+}
+
+.vp-visit-list li:last-child {
+  border-bottom: none;
+}
+
+.vp-visit-list li > i {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bleu-tres-clair);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bleu-principal);
+  font-size: 1rem;
+}
+
+.vp-visit-list strong {
+  display: block;
+  color: var(--bleu-profond);
+}
+
+/* Appel à l'action final */
+.vp-visit-cta {
+  background: linear-gradient(135deg, var(--bleu-profond) 0%, var(--bleu-principal) 100%);
+  padding: 4rem 1rem;
+  text-align: center;
+  color: var(--blanc);
+}
+
+.vp-visit-cta h2 {
+  color: var(--blanc);
+  margin-bottom: 0.8rem;
+}
+
+.vp-visit-cta p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+  margin: 0 auto 1.8rem;
+}
+
+/* Le pied de page colle à la bande bleue (la bande est le
+   dernier bloc de <main>) */
+main:has(.vp-visit-cta) + footer {
+  margin-top: 0;
+}
+
+/* Les ancres de la page ne se cachent pas sous la navbar */
+#getting-there, #when, #stay, #do, #guides, #eco-ferme, #etiquette {
+  scroll-margin-top: 80px;
+}
+
+/* ------------------------------------------------
+   16. RESPONSIVE
    ------------------------------------------------ */
 @media (max-width: 768px) {
   h1 { font-size: 1.8rem; }
@@ -1657,4 +1993,9 @@ footer a:hover {
   }
 
   .vp-contact-card-body { padding: 1.5rem; }
+
+  /* Page Visit : la liste de faits passe sur une colonne */
+  .vp-facts { grid-template-columns: 1fr; gap: 0.1rem 0; }
+  .vp-facts dd { margin-bottom: 0.5rem; }
+  .vp-visit-cta { padding: 3rem 1rem; }
 }
