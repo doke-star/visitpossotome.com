@@ -204,7 +204,25 @@
               Write to me here and I will get back to you.
             </p>
 
+            <!-- Appel à contribution -->
+            <div class="vp-contribute" id="contribute">
+              <h4>
+                <i class="bi bi-images me-2 vp-icon-accent" aria-hidden="true"></i>
+                Share your Possotomè
+              </h4>
+              <p>
+                Are you from Possotomè, in the diaspora, or did you visit one
+                day? Old photographs, memories of a festival, the story of a
+                grandparent, a date missing from our
+                <a href="life.html#history">timeline</a>: everything helps
+                to keep the memory of the community alive. Attach a photo
+                below and tell us who and what it shows. Nothing is published
+                without your agreement.
+              </p>
+            </div>
+
             <form name="contact" method="POST" action="/thank-you.html"
+                  enctype="multipart/form-data"
                   data-netlify="true" netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="contact">
               <p class="visually-hidden">
@@ -227,6 +245,15 @@
                 <div class="col-12">
                   <label for="messageText" class="form-label">Message</label>
                   <textarea class="form-control" id="messageText" name="message" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                  <label for="photo" class="form-label">Photo (optional)</label>
+                  <input type="file" class="form-control" id="photo" name="photo"
+                         accept="image/*" aria-describedby="photoHelp">
+                  <div class="form-text" id="photoHelp">
+                    One image, 8 MB at most. For several photos, send them one
+                    by one or write to contact@visitpossotome.com.
+                  </div>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="vp-btn">
