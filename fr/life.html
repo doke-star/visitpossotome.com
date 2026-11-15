@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vie locale | Visit Possotomè</title>
+  <meta name="description" content="La vie de la communauté de Possotomè, au Bénin : les organisations de jeunesse (UJAP, CACE, ADESCAP), les dix villages, le festival Awilé, la carte des lieux et l'histoire de l'arrondissement.">
+  <meta name="theme-color" content="#185FA5">
+  <link rel="canonical" href="https://visitpossotome.com/fr/life">
+  <link rel="alternate" hreflang="en" href="https://visitpossotome.com/life">
+  <link rel="alternate" hreflang="fr" href="https://visitpossotome.com/fr/life">
+  <link rel="alternate" hreflang="x-default" href="https://visitpossotome.com/life">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visit Possotomè">
+  <meta property="og:title" content="La vie à Possotomè | Culture et communauté">
+  <meta property="og:description" content="Découvrez la vie communautaire de Possotomè, au Bénin : organisations de jeunesse, dix villages, fêtes et traditions.">
+  <meta property="og:url" content="https://visitpossotome.com/fr/life">
+  <meta property="og:image" content="https://visitpossotome.com/img/possotome-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icônes -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Visit Possotomè">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Polices + Bootstrap 5 + notre CSS unique -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Leaflet : carte interactive des villages (fond OpenStreetMap) -->
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Données structurées : les deux événements annuels -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Festival Awilé",
+      "description": "Cérémonie annuelle dédiée à Awilé, la déesse du lac Ahémé. Elle a lieu chaque année en février à Possotomè, au Bénin.",
+      "eventSchedule": { "@type": "Schedule", "repeatFrequency": "P1Y", "byMonth": 2 },
+      "location": {
+        "@type": "Place",
+        "name": "Possotomè",
+        "address": { "@type": "PostalAddress", "addressLocality": "Possotomè", "addressRegion": "Mono", "addressCountry": "BJ" }
+      },
+      "image": "https://visitpossotome.com/img/awile1.jpg",
+      "url": "https://visitpossotome.com/fr/life",
+      "inLanguage": "fr"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Cérémonie royale du 10 janvier",
+      "description": "Chaque 10 janvier, le roi Ayolomi Laté II réunit les dix villages de Possotomè pour la fête nationale du Vodoun.",
+      "eventSchedule": { "@type": "Schedule", "repeatFrequency": "P1Y", "byMonth": 1, "byMonthDay": 10 },
+      "location": {
+        "@type": "Place",
+        "name": "Possotomè",
+        "address": { "@type": "PostalAddress", "addressLocality": "Possotomè", "addressRegion": "Mono", "addressCountry": "BJ" }
+      },
+      "image": "https://visitpossotome.com/img/posso.jpg",
+      "url": "https://visitpossotome.com/fr/life",
+      "inLanguage": "fr"
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Navigation principale">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../img/logo.svg" alt="Visit Possotomè" class="logo-img" width="220" height="60">
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="life.html">Vie locale</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="visit.html">Votre visite</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link vp-lang" href="../life.html" lang="en" hreflang="en" aria-label="English version"><i class="bi bi-translate me-1" aria-hidden="true"></i>EN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ============================================
+       EN-TÊTE DE PAGE
+       ============================================ -->
+  <header class="vp-page-hero">
+    <span class="vp-tag mb-3 d-inline-block">Culture et communauté</span>
+    <h1>La vie à Possotomè</h1>
+    <p>
+      Au-delà du lac et des sources, Possotomè, ce sont avant tout ses
+      habitants, leurs traditions, leurs langues, leurs fêtes et leur vision
+      de l'avenir.
+    </p>
+  </header>
+
+  <!-- ============================================
+       1. LE CHEF DE L'ARRONDISSEMENT
+       ============================================ -->
+  <section class="vp-section vp-section-white" aria-labelledby="h-leadership">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Autorités</p>
+        <h2 id="h-leadership">Le mot du chef d'arrondissement de Possotomè</h2>
+      </div>
+
+      <div class="vp-person-card">
+        <img src="../img/marcel.jpg"
+             alt="Marcel Sossou, chef de l'arrondissement de Possotomè, portant l'écharpe aux couleurs du Bénin"
+             class="vp-person-photo" width="180" height="200">
+        <div class="vp-person-text">
+          <h3>Marcel Sossou</h3>
+          <div class="vp-role-title">
+            Chef d'arrondissement — réélu en 2026
+          </div>
+          <p>
+            « Possotomè est une terre de dialogue, de solidarité et de
+            résilience. Nos dix villages, nos langues et nos traditions ne
+            sont pas des vestiges du passé : ils sont le socle vivant sur
+            lequel nous bâtissons ensemble l'avenir de notre communauté. Je
+            suis honoré de servir cet arrondissement pour un nouveau mandat,
+            et déterminé à ce que chaque village, chaque famille et chaque
+            jeune trouve sa place dans notre progrès commun. »
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       2. L'UJAP + ADESCAP
+       ============================================ -->
+  <section class="vp-section-ujap" aria-labelledby="h-ujap">
+    <div class="container">
+
+      <div class="row align-items-start g-5">
+
+        <!-- Texte UJAP -->
+        <div class="col-lg-7">
+          <p class="vp-section-label">Jeunesse et communauté</p>
+          <img src="../img/ujap.jpg" alt="Des membres de l'UJAP devant la maison des jeunes de Possotomè"
+               class="vp-img-cover vp-img-h260 vp-img-top vp-rounded vp-mb"
+               loading="lazy" decoding="async">
+          <h2 id="h-ujap">UJAP (Union des Jeunes de l'Arrondissement de Possotomè)</h2>
+          <p>
+            Fondée en 1999, l'UJAP a été créée pour offrir un cadre où les
+            jeunes des dix villages puissent débattre des questions qui
+            touchent leur communauté. En 27 ans, elle est devenue l'une des
+            organisations de jeunesse les plus actives de la commune de Bopa.
+          </p>
+          <p>
+            Depuis sa création, l'UJAP s'investit dans l'éducation : elle
+            organise des cours de vacances et un accompagnement aux examens
+            pour les élèves en classe d'examen. Elle anime le
+            <strong>Tournoi de la Solidarité</strong> (sport), des journées
+            récréatives, des campagnes de salubrité et des formations à
+            l'entrepreneuriat et au numérique. Elle joue aussi un rôle dans
+            la résolution des conflits au sein de la jeunesse et de
+            l'arrondissement tout entier.
+          </p>
+          <p>
+            L'UJAP n'a jamais travaillé seule. Au fil des ans, elle a
+            collaboré avec l'ADESCAP, la Sobebra, les ONG Cambo les Bains et
+            AHSM, Radio Ahémé FM, l'association Valorisation Agricole,
+            l'association Un Regard vers le Sud et la JCI, chaque
+            partenariat renforçant sa capacité à servir.
+          </p>
+          <p class="vp-location-note">
+            <i class="bi bi-geo-alt-fill me-1 vp-icon-accent" aria-hidden="true"></i>
+            Siège au <strong>Centre Zabalki</strong>, la maison des jeunes
+            de Possotomè, près du carrefour principal, en face du centre de
+            santé de Possotomè.
+          </p>
+        </div>
+
+        <!-- Cartes activités -->
+        <div class="col-lg-5">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
+                <h5>Vie communautaire</h5>
+                <p>Journées récréatives et actions de solidarité dans tous les villages.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-book-fill" aria-hidden="true"></i></div>
+                <h5>Soutien scolaire</h5>
+                <p>Cours de vacances et préparation aux examens depuis 1999.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-trophy-fill" aria-hidden="true"></i></div>
+                <h5>Activités sportives</h5>
+                <p>Le Tournoi de la Solidarité, qui réunit chaque année les dix villages.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="vp-card vp-mini-card">
+                <div class="vp-ujap-icon mx-auto"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i></div>
+                <h5>Formations</h5>
+                <p>Entrepreneuriat, numérique et campagnes de salubrité.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Liste des présidents -->
+          <div class="vp-card vp-card-padded mt-3">
+            <h5 class="vp-presidents-title">
+              <i class="bi bi-person-badge-fill me-2 vp-icon-accent" aria-hidden="true"></i>
+              Les présidents depuis 1999
+            </h5>
+            <div class="vp-presidents">
+              <div class="vp-president-row"><span>Akodjinou Gustave</span><span class="vp-president-years">1999-2003</span></div>
+              <div class="vp-president-row"><span>Gbèlèmè Michel</span><span class="vp-president-years">2003-2005</span></div>
+              <div class="vp-president-row"><span>Kpohonsito Ignace</span><span class="vp-president-years">2005-2009</span></div>
+              <div class="vp-president-row"><span>Sagbo Martin</span><span class="vp-president-years">2009-2011</span></div>
+              <div class="vp-president-row"><span>Madokpon Armand</span><span class="vp-president-years">2011-2013</span></div>
+              <div class="vp-president-row"><span>Anato Rémy</span><span class="vp-president-years">2013-2015</span></div>
+              <div class="vp-president-row"><span>Sossou Marcel</span><span class="vp-president-years">2015-2021</span></div>
+              <div class="vp-president-row"><span>Tchakpali Mauriac</span><span class="vp-president-years">2021-2025</span></div>
+              <div class="vp-president-row"><span><strong>Houédanou Elysée</strong></span><span class="vp-president-years">depuis 2025</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ADESCAP -->
+      <div class="row g-4 mt-4">
+        <div class="col-12">
+          <div class="vp-card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../img/adescap2.jpg" alt="Des membres de l'ADESCAP réunis à Possotomè"
+                     class="vp-adescap-img" loading="lazy" decoding="async">
+              </div>
+              <div class="col-md-8">
+                <div class="vp-adescap-text">
+                  <span class="vp-tag">Développement communautaire — l'organisation des aînés</span>
+                  <h3>ADESCAP</h3>
+                  <p>
+                    Pendant de l'UJAP chez les aînés,
+                    l'<strong>ADESCAP</strong> (Association pour le
+                    Développement Économique, Social et Culturel de
+                    l'Arrondissement de Possotomè) est la colonne vertébrale
+                    du développement porté par la communauté. Elle œuvre au
+                    progrès économique, social et culturel des dix villages :
+                    elle soutient les initiatives locales, renforce les
+                    institutions et entretient la solidarité entre les
+                    générations. Ensemble, l'ADESCAP et l'UJAP forment une
+                    force unie pour l'avenir durable de Possotomè, l'une
+                    portant la vision, l'autre apportant chaque jour, sur le
+                    terrain, l'énergie de la jeunesse.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       3. CACE — Culture & Youth
+       ============================================ -->
+  <section class="vp-section vp-section-white pb-3" id="cace" aria-labelledby="h-cace">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Jeunesse et culture</p>
+        <h2 id="h-cace">CACE (Cercle des Amis de la Culture et de l'Épanouissement)</h2>
+        <p class="vp-section-sub">
+          Chaque été depuis août 2015, Possotomè s'anime le dimanche soir au
+          rythme de la poésie, de la danse, de la musique et des contes : une
+          fête de la culture qui éclaire la communauté jusque tard dans la nuit.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-start">
+
+        <!-- Texte -->
+        <div class="col-lg-6">
+          <p>
+            Né de l'énergie des organisations de jeunesse de Possotomè, le
+            <strong>CACE</strong> organise chaque année, entre août et
+            septembre, un programme culturel d'un mois qui transforme la
+            localité chaque dimanche soir. Lectures, poésie, interprétations
+            vocales et instrumentales, chorégraphies et prestations
+            folkloriques remplissent les soirées de couleurs et de sons, et
+            offrent aux jeunes une scène pour s'exprimer et célébrer leur
+            identité.
+          </p>
+          <p>
+            L'événement est soutenu par la mairie, l'ADESCAP, Radio FM Ahémé
+            et des bénévoles de la communauté qui croient en la culture comme
+            moteur de développement. Avec les cours de vacances de l'UJAP et
+            l'émission des jeunes sur Radio Ahémé FM, le CACE est l'un des
+            piliers qui maintiennent les jeunes, qu'ils soient restés sur
+            place ou rentrés pour les vacances, engagés, inspirés et
+            attachés à leurs racines.
+          </p>
+          <p>
+            Ce qui n'était au départ qu'une initiative est devenu l'un des
+            rendez-vous annuels les plus attendus de Possotomè, et fait
+            aujourd'hui office de branche culturelle de l'UJAP. Chaque édition
+            doit une grande part de son succès à ses deux présentateurs
+            emblématiques, qui partagent la scène année après année :
+            <strong>Prevert Djossou</strong> et <strong>Djahou Oke</strong>.
+          </p>
+
+          <!-- Hommage -->
+          <div class="vp-note">
+            <p>
+              <i class="bi bi-star-fill me-2 vp-icon-accent" aria-hidden="true"></i>
+              Nous rendons hommage à <strong>Parfait Davah</strong>, président
+              fondateur du CACE et l'un de ses plus fervents défenseurs,
+              disparu en laissant un héritage d'engagement culturel et de
+              dévouement au développement de Possotomè. Son esprit vit dans
+              chaque édition de cet événement.
+            </p>
+          </div>
+
+          <!-- Fondateurs -->
+          <div class="mt-4">
+            <p class="vp-section-label mb-2">Membres fondateurs</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="vp-language-pill">Parfait Davah †</span>
+              <span class="vp-language-pill">Olivier Kpohonsito</span>
+              <span class="vp-language-pill">Narcisse Kpohonsito</span>
+              <span class="vp-language-pill">Pacôme Zounmabou</span>
+              <span class="vp-language-pill">Aristide Houngbo</span>
+              <span class="vp-language-pill">Arnaud Tossavi</span>
+              <span class="vp-language-pill">Djahou Oke</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Photos -->
+        <div class="col-lg-6">
+          <div class="row g-3">
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="../img/cace.jpg" alt="Affiche récapitulative d'une édition du CACE"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>Affiche récapitulative du CACE</p></div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="../img/chore.jpg" alt="Des danseurs exécutant une chorégraphie folklorique lors d'une soirée du CACE"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>Chorégraphie et prestation folklorique</p></div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="../img/cace1.jpg" alt="L'équipe de coordination du CACE"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>L'équipe de coordination du CACE, cœur de l'organisation</p></div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="vp-card">
+                <img src="../img/audience.jpg" alt="Le public lors d'une soirée dominicale du CACE"
+                     class="vp-img-cover vp-img-h200" loading="lazy" decoding="async">
+                <div class="vp-card-body"><p>Le public, chaque dimanche soir d'août</p></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dates -->
+          <div class="vp-card vp-date-card mt-3">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-calendar-event-fill" aria-hidden="true"></i>
+              <div>
+                <strong>Chaque année en août et septembre, depuis 2015</strong><br>
+                <span>Le dimanche soir — Possotomè Centre</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bande de séparation -->
+  <div class="vp-divider-band" aria-hidden="true">
+    <i class="bi bi-water"></i>
+  </div>
+
+  <!-- ============================================
+       4. VILLAGES, ETHNIES ET LANGUES
+       ============================================ -->
+  <section class="vp-section-villages" aria-labelledby="h-villages">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Identité et territoire</p>
+        <h2 id="h-villages">Dix villages, un arrondissement</h2>
+        <p class="vp-section-sub">
+          Sous l'autorité traditionnelle du roi Ayolomi Laté, les dix villages
+          de Possotomè ont chacun leur identité, leurs fêtes et leurs
+          coutumes, unis par les rives du lac Ahémé et un même sentiment
+          d'appartenance.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Les 10 villages -->
+        <div class="col-lg-6">
+          <h3 class="vp-subheading">
+            <i class="bi bi-geo-fill me-2 vp-icon-accent" aria-hidden="true"></i>
+            Les dix villages
+          </h3>
+          <div class="row g-1">
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Sehomi Kogbomè</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Sehomi Dato</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Gbèdjèwa</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Wocomey</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Zinhouegoh</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Ouassa-Kpodji</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Ouassa-Tokpa</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Possotomè Centre</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Hounnontin</div></div>
+            <div class="col-6"><div class="vp-village-badge"><i class="bi bi-house-fill" aria-hidden="true"></i> Akokponawa</div></div>
+          </div>
+
+          <!-- Langues -->
+          <div class="vp-languages">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-chat-dots-fill vp-icon-accent" aria-hidden="true"></i>
+              <strong class="vp-languages-label">Langues parlées</strong>
+            </div>
+            <div>
+              <span class="vp-language-pill">Sahouè</span>
+              <span class="vp-language-pill">Pédah</span>
+              <span class="vp-language-pill">Kotafon</span>
+              <span class="vp-language-pill">Aïzo</span>
+              <span class="vp-language-pill">Français</span>
+            </div>
+            <p class="vp-location-note mt-2">
+              Le sahouè et le pédah sont les langues des villages du bord du
+              lac ; le kotafon est parlé à Possotomè Centre, et l'aïzo par des
+              familles dans tout l'arrondissement. Le français est la langue
+              officielle.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Le roi -->
+        <div class="col-lg-6">
+          <div class="vp-card vp-king-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              <h3>Autorité traditionnelle</h3>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <img src="../img/ajolomi.jpg"
+                   alt="Le roi Ayolomi Laté II, roi traditionnel de Possotomè"
+                   class="vp-king-photo" loading="lazy" decoding="async">
+              <div>
+                <strong class="vp-king-name">Roi Ayolomi Laté II</strong><br>
+                <span class="vp-king-title">Roi traditionnel de Possotomè</span>
+                <p class="image-credit">
+                  Photo :
+                  <a href="https://musicafricawakemedia.wordpress.com/2024/11/10/africa-global-peace-summit-presents-the-bio-of-hrh-anagonou-late-ayolomi-ii-of-possotome-benin-republic/"
+                     target="_blank" rel="noopener noreferrer">
+                    Africa Global Peace Summit
+                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <p>
+              Le roi <strong>Ayolomi Laté</strong> est le chef traditionnel
+              qui veille sur la vie culturelle et spirituelle de
+              l'arrondissement, et s'assure que l'héritage ancestral des dix
+              villages soit préservé et respecté de génération en génération.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carte interactive des villages et des lieux -->
+      <div class="vp-map-block" id="map">
+        <h3 class="vp-subheading">
+          <i class="bi bi-map-fill me-2 vp-icon-accent" aria-hidden="true"></i>
+          Se repérer
+        </h3>
+        <p class="vp-map-intro">
+          Les dix villages s'étirent le long de la rive ouest du lac Ahémé,
+          de Gbèdjèwa au sud à Akokponawa au nord. Touchez un point pour voir
+          ce qui s'y trouve, et utilisez les boutons sous la carte pour
+          afficher ou masquer une catégorie.
+        </p>
+        <!-- Les points de la carte sont dans js/map.js -->
+        <div class="vp-map" id="villageMap" data-vp-map role="region"
+             aria-label="Carte interactive des villages et des lieux de Possotomè"></div>
+        <noscript>
+          <p class="vp-map-note">
+            La carte interactive nécessite JavaScript. Les dix villages sont listés ci-dessus.
+          </p>
+        </noscript>
+        <div class="vp-map-legend" data-vp-map-legend></div>
+        <p class="vp-map-note">
+          <i class="bi bi-info-circle-fill me-1 vp-icon-accent" aria-hidden="true"></i>
+          Les positions viennent d'OpenStreetMap et de Google Maps et sont
+          approximatives. Un lieu manque ou est mal placé ?
+          <a href="contact.html#message">Dites-le-nous</a>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       5. ÉVÉNEMENTS CULTURELS
+       ============================================ -->
+  <section class="vp-section-events" aria-labelledby="h-events">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Vie culturelle</p>
+        <h2 id="h-events">Les fêtes qui font Possotomè</h2>
+        <p class="vp-section-sub">
+          Deux événements, plus que tous les autres, rythment la vie à
+          Possotomè : l'un ancien, l'autre renaissant, tous deux profondément
+          ancrés dans l'identité de la communauté.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Festival Awilé -->
+        <div class="col-md-6">
+          <article class="vp-event-card" id="awile">
+            <div class="vp-event-header">
+              <div class="mois">
+                <i class="bi bi-calendar3 me-1" aria-hidden="true"></i> Février, chaque année
+              </div>
+              <h3>Le festival Awilé</h3>
+            </div>
+            <div class="vp-event-body">
+              <img src="../img/awile1.jpg" alt="La foule réunie sur les rives du lac Ahémé pour le festival Awilé"
+                   class="vp-img-cover vp-img-h180 vp-rounded" loading="lazy" decoding="async">
+              <p>
+                <strong>Qu'est-ce qu'Awilé ?</strong> Dans la riche
+                spiritualité béninoise, Awilé est une puissante déesse liée
+                au lac Ahémé. Elle est vénérée comme protectrice de la
+                communauté, gardienne des eaux et symbole de renouveau et
+                d'harmonie. Le festival qui porte son nom n'est pas une
+                simple fête : c'est l'expression profonde du lien entre les
+                habitants de Possotomè et la nature qui les fait vivre.
+                Awilé est une grande cérémonie et l'un des plus beaux
+                trésors du patrimoine culturel béninois. Elle marque
+                l'ouverture d'une nouvelle année de paix et de sérénité, un
+                moment où les communautés dépassent leurs querelles,
+                laissent leurs peines derrière elles et repartent ensemble.
+                La célébration commence la veille au soir, quand les danses
+                et les chants du Zandro emplissent l'air et annoncent ce
+                qui vient.
+              </p>
+              <p>
+                Des historiens voient dans cette cérémonie l'un des ancêtres
+                des carnavals d'Amérique du Sud : ses rythmes et ses danses
+                auraient traversé l'Atlantique avec les personnes réduites
+                en esclavage, qui ont maintenu la tradition vivante au
+                Brésil, en Haïti et à Trinité.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fête du 10 janvier -->
+        <div class="col-md-6">
+          <article class="vp-event-card" id="royal-ceremony">
+            <div class="vp-event-header">
+              <div class="mois">
+                <i class="bi bi-calendar3 me-1" aria-hidden="true"></i> 10 janvier, chaque année
+              </div>
+              <h3>La cérémonie royale de janvier</h3>
+            </div>
+            <div class="vp-event-body">
+              <img src="../img/posso.jpg" alt="Cérémonie royale du 10 janvier à Possotomè"
+                   class="vp-img-cover vp-img-h180 vp-rounded" loading="lazy" decoding="async">
+              <p>
+                Chaque 10 janvier, le Bénin célèbre la fête nationale du
+                Vodoun. À Possotomè, cette date prend une dimension très
+                locale : le roi <strong>Ayolomi Laté</strong> organise une
+                cérémonie royale qui réunit les dix villages autour de la
+                spiritualité ancestrale, des liens communautaires et de la
+                fierté culturelle.
+              </p>
+              <p>
+                La cérémonie se tient en différé, pour laisser à chaque
+                village le temps d'honorer la fête à sa manière avant de
+                rejoindre le rassemblement collectif sous l'autorité du roi.
+              </p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. AGENDA DE L'ANNÉE
+       ============================================ -->
+  <section class="vp-section vp-section-white" id="agenda" aria-labelledby="h-agenda">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Agenda</p>
+        <h2 id="h-agenda">Une année à Possotomè</h2>
+        <p class="vp-section-sub">
+          Les rendez-vous qui rythment la vie de la communauté, de la
+          cérémonie royale de janvier aux soirées culturelles d'août.
+        </p>
+      </div>
+
+      <ol class="vp-timeline">
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">10</span><span class="vp-timeline-month">Janvier</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#royal-ceremony">La cérémonie royale de janvier</a></h3>
+            <p>
+              Le jour de la fête nationale du Vodoun, le roi Ayolomi Laté II
+              réunit les dix villages pour célébrer la spiritualité
+              ancestrale et les liens de la communauté.
+            </p>
+            <span class="vp-tag">Tradition</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Février</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#awile">Le festival Awilé</a></h3>
+            <p>
+              La grande cérémonie dédiée à Awilé, déesse du lac Ahémé, ouvre
+              une nouvelle année de paix. La veille est animée par les danses
+              et les chants du Zandro. La date exacte est annoncée chaque année.
+            </p>
+            <span class="vp-tag">Festival</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Juillet – septembre</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#h-ujap">Les cours de vacances de l'UJAP</a></h3>
+            <p>
+              Pendant les vacances scolaires, l'UJAP organise des cours de
+              révision et de préparation aux examens pour les élèves en
+              classe d'examen, clôturés par une remise de prix.
+            </p>
+            <span class="vp-tag">Éducation</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Août</span><span class="vp-timeline-note">chaque dimanche</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#cace">Les soirées culturelles du CACE</a></h3>
+            <p>
+              Poésie, lectures, chorégraphies et prestations folkloriques
+              chaque dimanche soir à Possotomè Centre, jusque tard dans la nuit.
+            </p>
+            <span class="vp-tag">Culture</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Toute l'année</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#h-ujap">Les actions communautaires de l'UJAP</a></h3>
+            <p>
+              Le Tournoi de la Solidarité, les journées récréatives, les
+              campagnes de nettoyage et de salubrité, les formations à
+              l'entrepreneuriat et au numérique, organisés dans les dix villages.
+            </p>
+            <span class="vp-tag">Communauté</span>
+          </div>
+        </li>
+
+      </ol>
+
+      <p class="vp-timeline-footnote">
+        <i class="bi bi-info-circle-fill me-1 vp-icon-accent" aria-hidden="true"></i>
+        Les dates sont indicatives. Les programmes précis sont annoncés sur
+        Radio Ahémé FM et par l'UJAP.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. PILIERS DE POSSOTOMÈ
+       ============================================ -->
+  <section class="vp-section vp-section-light" aria-labelledby="h-pillars">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Institutions et lieux clés</p>
+        <h2 id="h-pillars">Les piliers de Possotomè</h2>
+        <p class="vp-section-sub">
+          Derrière toute communauté vivante, il y a des institutions et des
+          personnes qui bâtissent, relient et servent. Voici les lieux et les
+          organisations qui ont façonné Possotomè et continuent de le faire.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Source thermale -->
+        <div class="col-md-6">
+          <article class="vp-card">
+            <img src="../img/source.jpg" alt="La source thermale de Possotomè"
+                 class="vp-img-cover vp-img-h250 vp-img-top" loading="lazy" decoding="async">
+            <div class="vp-card-body">
+              <span class="vp-tag">Patrimoine naturel</span>
+              <h3>Les sources thermales</h3>
+              <p>
+                Les sources thermales de Possotomè sont l'étincelle qui a fait
+                connaître la localité. Réputées au Bénin et au-delà pour
+                leurs eaux riches en minéraux, à plus de 40 °C, elles attirent
+                depuis des décennies visiteurs, chercheurs et investisseurs.
+                L'eau est aujourd'hui mise en bouteille sous la marque
+                <strong>Possotomè</strong> et distribuée dans tout le pays,
+                ce qui donne à l'arrondissement une visibilité économique
+                durable. Plus qu'une merveille naturelle, les sources ont
+                ouvert les yeux de Possotomè sur le monde, et ceux du monde
+                sur Possotomè.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Radio Ahémé -->
+        <div class="col-md-6">
+          <article class="vp-card">
+            <img src="../img/aheme2.jpg" alt="Le bâtiment de Radio Ahémé FM à Possotomè"
+                 class="vp-img-cover vp-img-h250" loading="lazy" decoding="async">
+            <div class="vp-card-body">
+              <span class="vp-tag">Médias et communication</span>
+              <h3>Radio Ahémé</h3>
+              <p>
+                Dans une région où les langues locales portent la culture et
+                l'identité, <strong>Radio Ahémé</strong> joue un rôle
+                irremplaçable. Premier outil de communication de masse du
+                Mono, elle émet en langues locales et touche les pêcheurs du
+                lac, les agriculteurs des villages et les familles des dix
+                villages de Possotomè. Bien plus qu'une station de radio,
+                c'est la voix de la communauté : elle diffuse l'information,
+                préserve les traditions et relie des personnes qui, sans
+                elle, ne seraient jamais entendues.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Chez Théo -->
+        <div class="col-12">
+          <article class="vp-card">
+            <img src="../img/theo2.jpg" alt="Le restaurant sur pilotis de Chez Théo, sur le lac Ahémé"
+                 class="vp-img-cover vp-img-h300" loading="lazy" decoding="async">
+            <div class="vp-card-body">
+              <span class="vp-tag">Tourisme et hospitalité</span>
+              <h3>Chez Théo, la fierté de Possotomè</h3>
+              <p>
+                Aucun lieu n'incarne mieux l'hospitalité de Possotomè que
+                <strong>Chez Théo</strong>. Fondé et dirigé par Théodore
+                Dotou, cet écolodge se trouve à 50 mètres des rives du lac
+                Ahémé et est devenu l'une des adresses les plus réputées du
+                Bénin. Avec son restaurant sur pilotis au-dessus de l'eau,
+                ses bungalows nichés dans des jardins luxuriants, sa piscine
+                avec vue sur le lac, ses bains thermaux et ses excursions en
+                pirogue, Chez Théo est bien plus qu'un hôtel. C'est une
+                porte d'entrée dans l'âme de la région, et une belle vitrine
+                de ce que Possotomè offre au monde.
+              </p>
+              <p class="mt-2">
+                <a href="https://chez-theo-les-bains.com/" target="_blank" rel="noopener noreferrer">
+                  Site officiel : chez-theo-les-bains.com
+                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                &nbsp;·&nbsp;
+                <a href="visit.html#stay">Préparer votre séjour</a>
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Hôtel Village Ahémé -->
+        <div class="col-md-6">
+          <article class="vp-card">
+            <img src="../img/vk1.jpg" alt="L'Hôtel Village Ahémé, à Possotomè"
+                 class="vp-img-cover vp-img-h250" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo :
+              <a href="https://www.tripadvisor.co.nz/Hotel_Review-g293765-d3244621-Reviews-Hotel_Village_Aheme-Porto_Novo_Oueme_Department.html#/media/3244621/?type=ALL_INCLUDING_RESTRICTED&albumid=101&category=101"
+                 target="_blank" rel="noopener noreferrer">
+                Hôtel Village Ahémé
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="vp-card-body">
+              <span class="vp-tag">Hôtellerie historique</span>
+              <h3>L'Hôtel Village Ahémé, un pionnier</h3>
+              <p>
+                Situé à deux pas des sources thermales et à 1 h 30 de Cotonou,
+                l'<strong>Hôtel Village Ahémé</strong> a été le premier
+                établissement à accueillir des visiteurs dans
+                l'arrondissement. Avec ses 46 chambres au bord du lac Ahémé,
+                il a été pendant des décennies une adresse de référence qui
+                a inscrit Possotomè sur la carte touristique du Bénin.
+                Historiquement lié au festival Awilé, il a reçu artistes,
+                visiteurs et délégations venus découvrir la richesse de la
+                région. Avec le temps, l'établissement a perdu de son éclat.
+                Il reste aujourd'hui le témoin d'un âge d'or, et c'est
+                précisément dans cet esprit que <strong>Chez Théo</strong> a
+                repris le flambeau, apportant une énergie nouvelle et une
+                fierté retrouvée sur les rives du lac Ahémé.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Eco-Bénin -->
+        <div class="col-md-6">
+          <article class="vp-card">
+            <img src="../img/ecobenin.jpg" alt="Le site d'écotourisme d'Eco-Bénin au bord du lac Ahémé"
+                 class="vp-img-cover vp-img-h250" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo :
+              <a href="https://www.ecobenin.org/possotome/" target="_blank" rel="noopener noreferrer">
+                Eco-Bénin
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="vp-card-body">
+              <span class="vp-tag">Écotourisme</span>
+              <h3>Eco-Bénin et l'Eco-Ferme</h3>
+              <p>
+                <strong>Eco-Bénin</strong> et l'<strong>Eco-Ferme</strong>
+                incarnent l'engagement de Possotomè pour un développement
+                durable. Par l'écotourisme, l'éducation à l'environnement et
+                des initiatives agricoles, ces structures protègent le
+                fragile écosystème du lac Ahémé tout en créant des revenus
+                pour les communautés locales. Elles offrent aux visiteurs
+                une immersion dans le paysage naturel et humain de la
+                région : visites guidées, produits locaux et rencontres
+                directes avec celles et ceux qui vivent ici.
+              </p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. FRISE HISTORIQUE
+       Réutilise les classes .vp-timeline de l'agenda.
+       ============================================ -->
+  <section class="vp-section vp-section-white" id="history" aria-labelledby="h-history">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Histoire</p>
+        <h2 id="h-history">Possotomè à travers le temps</h2>
+        <p class="vp-section-sub">
+          Quelques dates qui ont façonné l'arrondissement, de la première
+          exploitation de la source thermale aux institutions d'aujourd'hui.
+        </p>
+      </div>
+
+      <ol class="vp-timeline">
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">1952</span></div>
+          <div class="vp-timeline-body">
+            <h3>La source thermale est exploitée</h3>
+            <p>
+              L'exploitation de la source minérale de Possotomè commence.
+              Son eau, plus tard mise en bouteille sous la marque Possotomè,
+              portera le nom de la localité dans tout le Bénin.
+            </p>
+            <span class="vp-tag">Patrimoine naturel</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">1986</span></div>
+          <div class="vp-timeline-body">
+            <h3>Ouverture de l'Hôtel Village Ahémé</h3>
+            <p>
+              Le premier hôtel de l'arrondissement accueille ses clients au
+              bord du lac et inscrit Possotomè sur la carte touristique du Bénin.
+            </p>
+            <span class="vp-tag">Tourisme</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">1999</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#h-ujap">Création de l'UJAP</a></h3>
+            <p>
+              Des jeunes des dix villages créent l'Union des Jeunes de
+              l'Arrondissement de Possotomè, avec Akodjinou Gustave pour
+              premier président.
+            </p>
+            <span class="vp-tag">Jeunesse</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">1999</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#h-pillars">Naissance d'Eco-Bénin</a></h3>
+            <p>
+              L'organisation d'écotourisme est créée la même année.
+              Possotomè deviendra son premier écovillage, avec un gîte géré
+              par la communauté, des circuits guidés autour du lac et des
+              guides formés sur place.
+            </p>
+            <span class="vp-tag">Écotourisme</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">2000</span></div>
+          <div class="vp-timeline-body">
+            <h3>Ouverture du CEG Possotomè</h3>
+            <p>
+              Une très bonne nouvelle pour la communauté. Jusque-là,
+              l'arrondissement n'avait pas de collège : les élèves qui
+              voulaient poursuivre leur parcours après le primaire devaient
+              aller à Bopa, à Comè ou dans une autre ville voisine, avec des
+              frais que beaucoup de familles ne pouvaient pas assumer. Plus
+              d'un a dû abandonner ses études. Avec le Collège d'Enseignement
+              Général, les enfants peuvent désormais continuer leur scolarité
+              chez eux.
+            </p>
+            <!-- Hommage -->
+            <div class="vp-note">
+              <p>
+                <i class="bi bi-star-fill me-2 vp-icon-accent" aria-hidden="true"></i>
+                Nous rendons hommage à feu <strong>Théophile Montcho</strong>,
+                acteur clé du développement de Possotomè, grâce à qui le CEG
+                a vu le jour. Chaque élève qui poursuit ses études ici
+                emprunte un chemin qu'il a contribué à ouvrir.
+              </p>
+            </div>
+            <span class="vp-tag">Éducation</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">2009</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="visit.html#give-back">Un soutien pour le centre Vinidogan</a></h3>
+            <p>
+              L'association allemande Chance für Benin commence à soutenir
+              le centre de nutrition tenu par Béatrice Nagnonhou et Firmine
+              Vodounou à Hounnontin.
+            </p>
+            <span class="vp-tag">Solidarité</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">2012</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="visit.html#eco-ferme">L'Eco-Ferme prend racine</a></h3>
+            <p>
+              Ignace Djossa et son père fondent une ferme agroécologique à
+              quelques mètres du village : pas de pesticides, des plants
+              d'espèces locales et un lieu d'apprentissage pour les jeunes.
+            </p>
+            <span class="vp-tag">Agroécologie</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">2015</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#cace">Premières soirées culturelles du CACE</a></h3>
+            <p>
+              En août, le Cercle des Amis de la Culture et de
+              l'Épanouissement tient ses premières soirées dominicales de
+              poésie, de danse et de musique à Possotomè Centre.
+            </p>
+            <span class="vp-tag">Culture</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">2026</span></div>
+          <div class="vp-timeline-body">
+            <h3>Possotomè en ligne</h3>
+            <p>
+              Marcel Sossou est réélu chef d'arrondissement, et Visit
+              Possotomè est lancé pour partager la vie de la communauté
+              avec le monde.
+            </p>
+            <span class="vp-tag">Aujourd'hui</span>
+          </div>
+        </li>
+
+      </ol>
+
+      <!-- Jalons dont l'année reste à confirmer : dès qu'elle est connue,
+           déplacer l'entrée dans la frise ci-dessus, à sa place. -->
+      <h3 class="vp-subheading vp-timeline-subheading">
+        <i class="bi bi-hourglass-split me-2 vp-icon-accent" aria-hidden="true"></i>
+        Des jalons encore à dater
+      </h3>
+
+      <ol class="vp-timeline">
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Date à confirmer</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#h-ujap">Création de l'ADESCAP</a></h3>
+            <p>
+              L'Association pour le Développement Économique, Social et
+              Culturel de l'Arrondissement de Possotomè réunit les aînés
+              autour du développement des dix villages. Elle devient le
+              pendant de l'UJAP chez les aînés.
+            </p>
+            <span class="vp-tag">Développement communautaire</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Date à confirmer</span></div>
+          <div class="vp-timeline-body">
+            <h3>Une nouvelle Maison des Jeunes</h3>
+            <p>
+              Un centre culturel nouvellement construit, non loin du CEG,
+              offre aux jeunes de l'arrondissement un lieu bien à eux pour
+              se retrouver, créer et se produire.
+            </p>
+            <span class="vp-tag">Jeunesse et culture</span>
+          </div>
+        </li>
+
+      </ol>
+
+      <p class="vp-timeline-footnote">
+        <i class="bi bi-pencil-fill me-1 vp-icon-accent" aria-hidden="true"></i>
+        Cette frise n'est qu'un début. Vous connaissez une date, un nom ou
+        une histoire qui a sa place ici ?
+        <a href="contact.html#message">Aidez-nous à la compléter</a>.
+      </p>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div class="container">
+      <div class="vp-footer-brand">Visit <span>Possotomè</span></div>
+      <p class="vp-footer-personal">
+        Une fenêtre sur la vie, la culture et l'âme de Possotomè, Bénin, Afrique de l'Ouest.
+      </p>
+      <hr class="vp-footer-divider">
+      <p class="vp-footer-bottom">
+        &copy; 2026 Djahou Oke, Visit Possotomè &nbsp;|&nbsp; Bénin, Afrique de l'Ouest
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Carte interactive : Leaflet, puis nos points (js/map.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="../js/map.js" defer></script>
+
+</body>
+</html>
