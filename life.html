@@ -527,26 +527,25 @@
           Find your way around
         </h3>
         <p class="vp-map-intro">
-          The villages stretch along the western shore of Lake Ahémé, from
-          Gbèdjèwa in the south to Akokponawa in the north. Tap a marker to
-          see what is there.
+          The ten villages stretch along the western shore of Lake Ahémé,
+          from Gbèdjèwa in the south to Akokponawa in the north. Tap a marker
+          to see what is there, and use the buttons under the map to show or
+          hide a category.
         </p>
-        <div class="vp-map" id="villageMap" role="region"
+        <!-- Les points de la carte sont dans js/map.js -->
+        <div class="vp-map" id="villageMap" data-vp-map role="region"
              aria-label="Interactive map of the villages and places of Possotomè"></div>
         <noscript>
           <p class="vp-map-note">
             The interactive map needs JavaScript. The ten villages are listed above.
           </p>
         </noscript>
-        <ul class="vp-map-legend" aria-label="Map legend">
-          <li><span class="vp-map-dot vp-map-dot-village" aria-hidden="true"></span> Village</li>
-          <li><span class="vp-map-dot vp-map-dot-place" aria-hidden="true"></span> Place to visit</li>
-        </ul>
+        <div class="vp-map-legend" data-vp-map-legend></div>
         <p class="vp-map-note">
           <i class="bi bi-info-circle-fill me-1 vp-icon-accent" aria-hidden="true"></i>
           Positions come from OpenStreetMap and Google Maps and are approximate.
-          Zinhouegoh is not yet on the map: if you know its exact location,
-          <a href="contact.html#message">tell us</a>.
+          Is a place missing or misplaced?
+          <a href="contact.html#message">Tell us</a>.
         </p>
       </div>
 
@@ -764,7 +763,7 @@
                 on the map. Known across Benin and beyond for their mineral-rich
                 waters at over 40°C, they have attracted visitors, researchers
                 and investors for decades. The water is now commercially bottled
-                under the <strong>Possotomé</strong> brand, distributed nationally
+                under the <strong>Possotomè</strong> brand, distributed nationally
                 and giving the arrondissement lasting economic visibility.
                 More than a natural wonder, the springs opened Possotomè's eyes
                 to the world and the world's eyes to Possotomè.
@@ -919,7 +918,7 @@
             <h3>The thermal spring comes into use</h3>
             <p>
               The mineral spring of Possotomè starts to be exploited. Its
-              water, later bottled under the Possotomé brand, will carry the
+              water, later bottled under the Possotomè brand, will carry the
               name of the village across Benin.
             </p>
             <span class="vp-tag">Natural heritage</span>
@@ -948,6 +947,45 @@
               first president.
             </p>
             <span class="vp-tag">Youth</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">1999</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#h-pillars">Eco-Bénin is born</a></h3>
+            <p>
+              The ecotourism organisation is created the same year. Possotomè
+              will become its first eco-village, with a community-run gîte,
+              guided circuits around the lake and guides trained on site.
+            </p>
+            <span class="vp-tag">Ecotourism</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-day">2000</span></div>
+          <div class="vp-timeline-body">
+            <h3>The CEG Possotomè opens</h3>
+            <p>
+              Very good news for the community. Until then the arrondissement
+              had no secondary school: pupils who wanted to continue after
+              primary school had to go to Bopa, Comè or another nearby town,
+              at a cost that many families could not bear. More than one had
+              to give up their studies. With the Collège d'Enseignement
+              Général, children can now continue their schooling at home.
+            </p>
+            <!-- Hommage -->
+            <div class="vp-note">
+              <p>
+                <i class="bi bi-star-fill me-2 vp-icon-accent" aria-hidden="true"></i>
+                We pay tribute to the late <strong>Théophile Montcho</strong>,
+                a key figure in the development of Possotomè, thanks to whom
+                the CEG came into being. Every pupil who continues their
+                studies here walks a path he helped to open.
+              </p>
+            </div>
+            <span class="vp-tag">Education</span>
           </div>
         </li>
 
@@ -1005,6 +1043,44 @@
 
       </ol>
 
+      <!-- Jalons dont l'année reste à confirmer : dès qu'elle est connue,
+           déplacer l'entrée dans la frise ci-dessus, à sa place. -->
+      <h3 class="vp-subheading vp-timeline-subheading">
+        <i class="bi bi-hourglass-split me-2 vp-icon-accent" aria-hidden="true"></i>
+        Milestones still to be dated
+      </h3>
+
+      <ol class="vp-timeline">
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Date to confirm</span></div>
+          <div class="vp-timeline-body">
+            <h3><a href="#h-ujap">ADESCAP is created</a></h3>
+            <p>
+              The Association pour le Développement Économique, Social et
+              Culturel de l'Arrondissement de Possotomè brings the elders
+              together around the development of the ten villages. It becomes
+              the senior counterpart of the UJAP.
+            </p>
+            <span class="vp-tag">Community development</span>
+          </div>
+        </li>
+
+        <li class="vp-timeline-item">
+          <div class="vp-timeline-date"><span class="vp-timeline-month">Date to confirm</span></div>
+          <div class="vp-timeline-body">
+            <h3>A new Maison des Jeunes</h3>
+            <p>
+              A newly built cultural centre, not far from the CEG, gives the
+              young people of the arrondissement a place of their own to
+              meet, create and perform.
+            </p>
+            <span class="vp-tag">Youth &amp; culture</span>
+          </div>
+        </li>
+
+      </ol>
+
       <p class="vp-timeline-footnote">
         <i class="bi bi-pencil-fill me-1 vp-icon-accent" aria-hidden="true"></i>
         This timeline is only a beginning. Do you know a date, a name or a
@@ -1036,103 +1112,9 @@
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
 
-  <!-- Leaflet JS (carte des villages) -->
+  <!-- Carte interactive : Leaflet, puis nos points (js/map.js) -->
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" defer></script>
-
-  <!-- Carte des villages : pour ajouter ou déplacer un point, modifier
-       les deux listes ci-dessous (latitude, longitude). -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var el = document.getElementById('villageMap');
-      if (!el || typeof L === 'undefined') return;
-
-      // Les villages de l'arrondissement (Zinhouegoh : position à confirmer)
-      var villages = [
-        { name: 'Akokponawa',       lat: 6.54388, lng: 1.96990, text: 'The northernmost village of the arrondissement.' },
-        { name: 'Hounnontin',       lat: 6.53734, lng: 1.97081, text: 'Home of the Centre Vinidogan and close to Chez Théo.' },
-        { name: 'Ouassa-Tokpa',     lat: 6.52685, lng: 1.96844, text: 'On the lakeshore, next to Possotomè Centre.' },
-        { name: 'Ouassa-Kpodji',    lat: 6.52618, lng: 1.96122, text: 'Home of the Yénawa market, the big market of the arrondissement.' },
-        { name: 'Possotomè Centre', lat: 6.52166, lng: 1.96812, text: 'The heart of the arrondissement: youth centre, CACE Sunday evenings. Kotafon is spoken here.' },
-        { name: 'Wocomey',          lat: 6.51536, lng: 1.96417, text: 'Between Possotomè Centre and Sèhomi.' },
-        { name: 'Sèhomi Kogbomè',   lat: 6.50946, lng: 1.96242, text: 'Next to the Gassiagamè barter market.' },
-        { name: 'Sèhomi Dato',      lat: 6.50600, lng: 1.96273, text: 'Lakeshore village of the Sèhomi area.' },
-        { name: 'Gbèdjèwa',         lat: 6.50506, lng: 1.96322, text: 'The southernmost village of the arrondissement.' }
-      ];
-
-      // Les lieux à visiter
-      var places = [
-        { name: 'Chez Théo les Bains',         lat: 6.53517, lng: 1.97065, text: 'Ecolodge and restaurant on stilts.', link: 'visit.html#stay', label: 'Plan your stay' },
-        { name: 'Hôtel Village Ahémé',         lat: 6.52880, lng: 1.96913, text: 'The historic hotel, near the thermal springs.', link: 'visit.html#stay', label: 'Plan your stay' },
-        { name: 'Centre de Nutrition Vinidogan', lat: 6.53805, lng: 1.96926, text: 'Nutrition centre for children, Hounnontin.', link: 'visit.html#give-back', label: 'How to help' },
-        { name: 'Gassiagamè barter market',    lat: 6.50771, lng: 1.96293, text: 'Foodstuffs exchanged without money, Sèhomi.', link: 'https://maps.app.goo.gl/k7mWeogfLaXRKhdf9', label: 'Directions' },
-        { name: 'Restaurant Sêhominou, Mama Dakouin', lat: 6.51668, lng: 1.94335, text: 'The best dakouin around.', link: 'visit.html#eat', label: 'Where to eat' }
-      ];
-
-      var started = false;
-
-      function start() {
-        if (started) return;
-        started = true;
-
-        var map = L.map(el, { scrollWheelZoom: false });
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 18,
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        var bounds = [];
-
-        function popup(p) {
-          var div = document.createElement('div');
-          var title = document.createElement('strong');
-          title.textContent = p.name;
-          div.appendChild(title);
-          div.appendChild(document.createElement('br'));
-          div.appendChild(document.createTextNode(p.text));
-          if (p.link) {
-            div.appendChild(document.createElement('br'));
-            var a = document.createElement('a');
-            a.href = p.link;
-            a.textContent = p.label;
-            if (p.link.indexOf('http') === 0) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
-            div.appendChild(a);
-          }
-          return div;
-        }
-
-        villages.forEach(function (v) {
-          L.circleMarker([v.lat, v.lng], {
-            radius: 9, color: '#FFFFFF', weight: 2, fillColor: '#185FA5', fillOpacity: 1
-          }).addTo(map).bindPopup(popup(v)).bindTooltip(v.name);
-          bounds.push([v.lat, v.lng]);
-        });
-
-        places.forEach(function (p) {
-          L.circleMarker([p.lat, p.lng], {
-            radius: 8, color: '#FFFFFF', weight: 2, fillColor: '#C8553D', fillOpacity: 1
-          }).addTo(map).bindPopup(popup(p)).bindTooltip(p.name);
-          bounds.push([p.lat, p.lng]);
-        });
-
-        map.fitBounds(bounds, { padding: [30, 30] });
-
-        // La molette ne zoome qu'après un clic sur la carte,
-        // pour ne pas bloquer le défilement de la page.
-        map.on('click', function () { map.scrollWheelZoom.enable(); });
-        map.on('mouseout', function () { map.scrollWheelZoom.disable(); });
-      }
-
-      // La carte ne se charge que lorsqu'elle approche de l'écran.
-      if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function (entries) {
-          if (entries[0].isIntersecting) { start(); io.disconnect(); }
-        }, { rootMargin: '300px' });
-        io.observe(el);
-      } else {
-        start();
-      }
-    });
-  </script>
+  <script src="js/map.js" defer></script>
 
 </body>
 </html>
