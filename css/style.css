@@ -1347,6 +1347,17 @@ footer a:hover {
   font-size: 1.6rem;
 }
 
+/* Hommage à l'intérieur d'une entrée de frise : fond blanc pour
+   ressortir sur le fond bleu clair de l'entrée */
+.vp-timeline-body .vp-note {
+  background: var(--blanc);
+  margin: 0.2rem 0 0.9rem;
+}
+
+.vp-timeline-body .vp-note p {
+  margin: 0;
+}
+
 /* Sous-titre « jalons à dater », entre les deux listes de la frise */
 .vp-timeline-subheading {
   max-width: 820px;
