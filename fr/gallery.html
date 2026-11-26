@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerie | Visit Possotomè</title>
+  <meta name="description" content="Découvrez Possotomè, au Bénin, en photos : paysages, traditions, vie locale et lieux à visiter.">
+  <meta name="theme-color" content="#185FA5">
+  <link rel="canonical" href="https://visitpossotome.com/fr/gallery">
+  <link rel="alternate" hreflang="en" href="https://visitpossotome.com/gallery">
+  <link rel="alternate" hreflang="fr" href="https://visitpossotome.com/fr/gallery">
+  <link rel="alternate" hreflang="x-default" href="https://visitpossotome.com/gallery">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visit Possotomè">
+  <meta property="og:title" content="Galerie de Possotomè">
+  <meta property="og:description" content="Découvrez Possotomè, au Bénin, en photos : paysages, traditions, vie locale et lieux à visiter.">
+  <meta property="og:url" content="https://visitpossotome.com/fr/gallery">
+  <meta property="og:image" content="https://visitpossotome.com/img/possotome-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icônes -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Visit Possotomè">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Polices + Bootstrap 5 + notre CSS unique -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Navigation principale">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../img/logo.svg" alt="Visit Possotomè" class="logo-img" width="220" height="60">
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="life.html">Vie locale</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="visit.html">Votre visite</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link vp-lang" href="../gallery.html" lang="en" hreflang="en" aria-label="English version"><i class="bi bi-translate me-1" aria-hidden="true"></i>EN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ============================================
+       EN-TÊTE DE PAGE
+       ============================================ -->
+  <header class="vp-page-hero">
+    <span class="vp-tag mb-3 d-inline-block">
+      <i class="bi bi-camera-fill me-1" aria-hidden="true"></i> Galerie de photos
+    </span>
+    <h1>Galerie</h1>
+    <p>
+      Un voyage en images à travers les paysages, les fêtes, les visages
+      et la vie quotidienne de Possotomè, vus par quelqu'un qui y a grandi.
+    </p>
+  </header>
+
+  <!-- ============================================
+       BARRE DE FILTRES
+       ============================================ -->
+  <div class="vp-filter-bar">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center gap-1" role="group" aria-label="Filtrer les photos par catégorie">
+        <button class="vp-filter-btn active" data-filter="all" aria-pressed="true">Toutes les photos</button>
+        <button class="vp-filter-btn" data-filter="festivals" aria-pressed="false">Fêtes et événements</button>
+        <button class="vp-filter-btn" data-filter="hotels" aria-pressed="false">Hôtels et tourisme</button>
+        <button class="vp-filter-btn" data-filter="eco" aria-pressed="false">Eco-Bénin et Eco-Ferme</button>
+        <button class="vp-filter-btn" data-filter="radio" aria-pressed="false">Radio Ahémé</button>
+        <button class="vp-filter-btn" data-filter="lake" aria-pressed="false">Le lac et ses habitants</button>
+        <button class="vp-filter-btn" data-filter="education" aria-pressed="false">Éducation</button>
+        <button class="vp-filter-btn" data-filter="economic" aria-pressed="false">Activités de subsistance</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       GALERIE
+       Chaque carte : data-img = image agrandie,
+       data-caption = légende, data-tag = catégorie.
+       ============================================ -->
+  <section class="vp-gallery-section" aria-label="Galerie de photos">
+    <div class="container">
+
+      <p class="vp-photo-count" aria-live="polite"><span id="photoCount"></span></p>
+
+      <div class="row g-4" id="galleryGrid">
+
+        <!-- ======= FESTIVALS & EVENTS ======= -->
+        <div class="col-md-4 vp-gallery-item" data-category="festivals">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/awile1.jpg"
+               data-caption="Festival Awilé — cérémonie annuelle sur les rives du lac Ahémé"
+               data-tag="Fêtes et événements">
+            <img src="../img/awile1.jpg" alt="Le festival Awilé, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Fêtes et événements</span>
+              <p>Festival Awilé, cérémonie annuelle sur les rives du lac Ahémé</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="festivals">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/posso.jpg"
+               data-caption="Cérémonie royale du 10 janvier — Possotomè"
+               data-tag="Fêtes et événements">
+            <img src="../img/posso.jpg" alt="Cérémonie royale du 10 janvier, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Fêtes et événements</span>
+              <p>Cérémonie royale du 10 janvier, Possotomè</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="festivals">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/awile3.jpg"
+               data-caption="Réjouissances du festival — Possotomè"
+               data-tag="Fêtes et événements">
+            <img src="../img/awile3.jpg" alt="Réjouissances du festival Awilé, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Fêtes et événements</span>
+              <p>Le festival Awilé, une cérémonie annuelle sur les rives du lac Ahémé</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= HOTELS & TOURISM ======= -->
+        <div class="col-md-4 vp-gallery-item" data-category="hotels">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/theo.jpg"
+               data-caption="Chez Théo — écolodge au bord du lac Ahémé"
+               data-tag="Hôtels et tourisme">
+            <img src="../img/theo.jpg" alt="L'écolodge Chez Théo, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Hôtels et tourisme</span>
+              <p>Chez Théo, écolodge au bord du lac Ahémé</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="hotels">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/theo2.jpg"
+               data-caption="Chez Théo — restaurant sur pilotis au-dessus du lac"
+               data-tag="Hôtels et tourisme">
+            <img src="../img/theo2.jpg" alt="Le restaurant sur pilotis de Chez Théo, sur le lac Ahémé" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Hôtels et tourisme</span>
+              <p>Chez Théo, restaurant sur pilotis au-dessus du lac</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="hotels">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/theo3.jpg"
+               data-caption="Chez Théo — écolodge au bord du lac Ahémé"
+               data-tag="Hôtels et tourisme">
+            <img src="../img/theo3.jpg" alt="Les jardins de l'écolodge Chez Théo, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Hôtels et tourisme</span>
+              <p>Chez Théo, écolodge au bord du lac Ahémé</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="hotels">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/vk1.jpg"
+               data-caption="Hôtel Village Ahémé — Possotomè (photo : Tripadvisor)"
+               data-tag="Hôtels et tourisme">
+            <img src="../img/vk1.jpg" alt="L'Hôtel Village Ahémé, Possotomè" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo : Tripadvisor
+              <a href="https://www.tripadvisor.co.nz/Hotel_Review-g293765-d3244621-Reviews-Hotel_Village_Aheme-Porto_Novo_Oueme_Department.html#/media/3244621/?type=ALL_INCLUDING_RESTRICTED&albumid=101&category=101"
+                 target="_blank" rel="noopener noreferrer" title="Voir la source sur Tripadvisor">
+                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                <span class="visually-hidden">Voir la source sur Tripadvisor</span>
+              </a>
+            </p>
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Hôtels et tourisme</span>
+              <p>Hôtel Village Ahémé, Possotomè</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="hotels">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/vk4.jpg"
+               data-caption="Hôtel Village Ahémé — Possotomè"
+               data-tag="Hôtels et tourisme">
+            <img src="../img/vk4.jpg" alt="L'Hôtel Village Ahémé, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Hôtels et tourisme</span>
+              <p>Hôtel Village Ahémé, Possotomè</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="hotels">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/vk5.jpg"
+               data-caption="Hôtel Village Ahémé — Possotomè"
+               data-tag="Hôtels et tourisme">
+            <img src="../img/vk5.jpg" alt="L'Hôtel Village Ahémé, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Hôtels et tourisme</span>
+              <p>Hôtel Village Ahémé, Possotomè</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= ECO-BÉNIN & ECO-FERME ======= -->
+        <div class="col-md-4 vp-gallery-item" data-category="eco">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/ecobenin.jpg"
+               data-caption="Eco-Bénin — écotourisme au bord du lac Ahémé (photo : Eco-Bénin)"
+               data-tag="Eco-Bénin et Eco-Ferme">
+            <img src="../img/ecobenin.jpg" alt="Le site d'écotourisme d'Eco-Bénin, Possotomè" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo :
+              <a href="https://www.ecobenin.org/possotome/" target="_blank" rel="noopener noreferrer">
+                Eco-Bénin <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Eco-Bénin et Eco-Ferme</span>
+              <p>Eco-Bénin, écotourisme au bord du lac Ahémé</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="eco">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/ecoferme1.jpg"
+               data-caption="Eco-Ferme — agriculture durable (photo : Lucie Mahé)"
+               data-tag="Eco-Bénin et Eco-Ferme">
+            <img src="../img/ecoferme1.jpg" alt="L'Eco-Ferme, agriculture durable à Possotomè" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo :
+              <a href="https://luciemahe-webmarketing.fr/realisations-webmarketing-morbihan/" target="_blank" rel="noopener noreferrer">
+                Lucie Mahé <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Eco-Bénin et Eco-Ferme</span>
+              <p>Eco-Ferme, agriculture durable à Possotomè</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="eco">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/ecoferme.jpg"
+               data-caption="Eco-Ferme — agriculture durable (photo : Eco-Bénin)"
+               data-tag="Eco-Bénin et Eco-Ferme">
+            <img src="../img/ecoferme.jpg" alt="L'Eco-Ferme, Possotomè" loading="lazy" decoding="async">
+            <p class="image-credit">
+              Photo :
+              <a href="https://www.ecobenin.org/possotome/" target="_blank" rel="noopener noreferrer">
+                Eco-Bénin <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </p>
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Eco-Bénin et Eco-Ferme</span>
+              <p>Eco-Ferme, agriculture durable</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= RADIO AHÉMÉ ======= -->
+        <div class="col-md-4 vp-gallery-item" data-category="radio">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/aheme2.jpg"
+               data-caption="Radio Ahémé FM — la voix de la région du Mono"
+               data-tag="Radio Ahémé">
+            <img src="../img/aheme2.jpg" alt="Radio Ahémé FM, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Radio Ahémé</span>
+              <p>Radio Ahémé FM, la voix de la région du Mono</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="radio">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/radio.jpg"
+               data-caption="Radio Ahémé — à l'antenne"
+               data-tag="Radio Ahémé">
+            <img src="../img/radio.jpg" alt="La régie technique de Radio Ahémé FM" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Radio Ahémé</span>
+              <p>La régie technique de Radio Ahémé FM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="radio">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/radio1.jpg"
+               data-caption="Radio Ahémé FM — la voix de la région du Mono"
+               data-tag="Radio Ahémé">
+            <img src="../img/radio1.jpg" alt="Radio Ahémé FM, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Radio Ahémé</span>
+              <p>Radio Ahémé FM, la voix de la région du Mono</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= LAKE & PEOPLE ======= -->
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/source.jpg"
+               data-caption="Les sources thermales — Possotomè"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/source.jpg" alt="Les sources thermales, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Les sources thermales, Possotomè</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/laken.jpg"
+               data-caption="Journée de salubrité à Sèhomi, organisée par l'UJAP"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/laken.jpg" alt="Journée de salubrité à Sèhomi, au bord du lac Ahémé" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Journée de salubrité à Sèhomi, organisée par l'UJAP</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/laken2.jpg"
+               data-caption="Un homme part pêcher sur le lac"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/laken2.jpg" alt="Un pêcheur part sur le lac Ahémé" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Un homme part pêcher sur le lac</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/cleaning-ujap1.jpg"
+               data-caption="Journée de salubrité à Possotomè – Radio Ahémé, organisée par l'UJAP"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/cleaning-ujap1.jpg" alt="Salubrité et reboisement communautaires à Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Journée de salubrité à Possotomè - Radio Ahémé, organisée par l'UJAP</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/cleaning.jpg"
+               data-caption="Journée de salubrité à Sèhomi, organisée par l'UJAP"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/cleaning.jpg" alt="Des bénévoles nettoient la rive du lac, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Journée de salubrité à Sèhomi, organisée par l'UJAP</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/cleaning-ujap.jpg"
+               data-caption="Journée de salubrité à Sèhomi, organisée par l'UJAP"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/cleaning-ujap.jpg" alt="Des bénévoles de l'UJAP nettoient la rive du lac, Sèhomi" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Journée de salubrité à Sèhomi, organisée par l'UJAP</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/ujap1.jpg"
+               data-caption="Élections de l'assemblée générale de l'UJAP, 2019"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/ujap1.jpg" alt="Élections de l'assemblée générale de l'UJAP, 2019" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Élections de l'assemblée générale de l'UJAP, 2019</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/anim1.jpg"
+               data-caption="Des animaux au bord du lac Ahémé, Possotomè"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/anim1.jpg" alt="Des animaux sur la rive du lac Ahémé, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Des animaux au bord du lac Ahémé, Possotomè</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="lake">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/kids.jpg"
+               data-caption="Les enfants à la maison, Hounnontin"
+               data-tag="Le lac et ses habitants">
+            <img src="../img/kids.jpg" alt="Des enfants à la maison, à Hounnontin" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Le lac et ses habitants</span>
+              <p>Les enfants à la maison, Hounnontin</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= EDUCATION ======= -->
+        <div class="col-md-4 vp-gallery-item" data-category="education">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/educ3.jpg"
+               data-caption="Cours de vacances de l'UJAP, remise de prix par Roger Tossavi"
+               data-tag="Éducation">
+            <img src="../img/educ3.jpg" alt="Remise de prix des cours de vacances de l'UJAP par Roger Tossavi" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Éducation</span>
+              <p>Cours de vacances de l'UJAP, remise de prix par Roger Tossavi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="education">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/educ2.jpg"
+               data-caption="Cours de vacances de l'UJAP, remise de prix par Marcel Sossou"
+               data-tag="Éducation">
+            <img src="../img/educ2.jpg" alt="Remise de prix des cours de vacances de l'UJAP par Marcel Sossou" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Éducation</span>
+              <p>Cours de vacances de l'UJAP, remise de prix par Marcel Sossou</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="education">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/educ1.jpg"
+               data-caption="Cours de vacances de l'UJAP, remise de prix par le directeur du collège, Gbèlemey Edmond"
+               data-tag="Éducation">
+            <img src="../img/educ1.jpg" alt="Remise de prix des cours de vacances de l'UJAP par le directeur du collège" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Éducation</span>
+              <p>Cours de vacances de l'UJAP, remise de prix par le directeur du collège, Gbèlemey Edmond</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="education">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/educ7.jpg"
+               data-caption="Cours de vacances organisés par l'UJAP"
+               data-tag="Éducation">
+            <img src="../img/educ7.jpg" alt="Cours de vacances de l'UJAP, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Éducation</span>
+              <p>Cours de vacances organisés par l'UJAP</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="education">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/educ6.jpg"
+               data-caption="Bureau de coordination des activités de vacances de l'UJAP"
+               data-tag="Éducation">
+            <img src="../img/educ6.jpg" alt="Bureau de coordination des activités de vacances de l'UJAP" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Éducation</span>
+              <p>Bureau de coordination des activités de vacances de l'UJAP</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= SUBSISTENCE ACTIVITIES ======= -->
+        <div class="col-md-4 vp-gallery-item" data-category="economic">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/gari.jpg"
+               data-caption="Une femme prépare le gari pour la vente"
+               data-tag="Activités de subsistance">
+            <img src="../img/gari.jpg" alt="Une femme prépare le gari, Possotomè" class="vp-img-top" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Activités de subsistance</span>
+              <p>Une femme prépare le gari pour la vente, son gagne-pain</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="economic">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/cloth.jpg"
+               data-caption="La jeune fille aide sa mère à vendre de la friperie"
+               data-tag="Activités de subsistance">
+            <img src="../img/cloth.jpg" alt="Marché de la friperie, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Activités de subsistance</span>
+              <p>La jeune fille aide sa mère à vendre de la friperie</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="economic">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/paulin.jpg"
+               data-caption="Paulin, artisan, et sa fille dans son atelier"
+               data-tag="Activités de subsistance">
+            <img src="../img/paulin.jpg" alt="Paulin, artisan, et sa fille dans son atelier" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Activités de subsistance</span>
+              <p>Paulin, artisan, et sa fille dans son atelier</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="economic">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/washing.jpg"
+               data-caption="Une femme fait la lessive pour gagner sa vie"
+               data-tag="Activités de subsistance">
+            <img src="../img/washing.jpg" alt="Une femme lave du linge, Possotomè" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Activités de subsistance</span>
+              <p>Une femme fait la lessive pour gagner sa vie</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 vp-gallery-item" data-category="economic">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/girl.jpg"
+               data-caption="Une jeune apprentie couturière"
+               data-tag="Activités de subsistance">
+            <img src="../img/girl.jpg" alt="Une jeune apprentie couturière, Possotomè" class="vp-img-top" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Activités de subsistance</span>
+              <p>Une jeune apprentie couturière</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8 vp-gallery-item" data-category="economic">
+          <div class="vp-gallery-card" role="button" tabindex="0"
+               data-bs-toggle="modal" data-bs-target="#lightbox"
+               data-img="../img/voie.jpg"
+               data-caption="Souvenir d'une de nos routes : le tronçon Radio Ahémé FM - Eco-Bénin en 2018"
+               data-tag="Activités de subsistance">
+            <img src="../img/voie.jpg" alt="La route entre Radio Ahémé FM et Eco-Bénin à Possotomè, en 2018" loading="lazy" decoding="async">
+            <div class="vp-gallery-card-body">
+              <span class="vp-tag">Activités de subsistance</span>
+              <p>Souvenir d'une de nos routes : le tronçon Radio Ahémé FM - Eco-Bénin en 2018</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- fin galleryGrid -->
+
+      <div class="vp-no-results" id="noResults">
+        <i class="bi bi-image" aria-hidden="true"></i>
+        <p class="mt-2">Pas encore de photos dans cette catégorie.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       APPEL À CONTRIBUTION
+       ============================================ -->
+  <section class="vp-cta-band" aria-labelledby="h-contribute">
+    <div class="container">
+      <h2 id="h-contribute">Vos photos ont leur place ici</h2>
+      <p>
+        Vous avez des photos de Possotomè, anciennes ou récentes ? Une fête,
+        un portrait de famille, le lac d'autrefois : partagez-les et aidez
+        cette galerie à grandir.
+      </p>
+      <a href="contact.html#contribute" class="vp-btn-hero-white">
+        <i class="bi bi-images me-2" aria-hidden="true"></i> Partager une photo
+      </a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================
+       LIGHTBOX MODAL
+       ============================================ -->
+  <div class="modal fade lightbox-modal" id="lightbox" tabindex="-1" aria-hidden="true" aria-labelledby="lightboxCaption">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body position-relative">
+          <button type="button"
+                  class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                  data-bs-dismiss="modal"
+                  aria-label="Fermer"></button>
+          <img id="lightboxImg" src="" alt="">
+        </div>
+        <div class="modal-footer">
+          <div>
+            <div class="lightbox-tag" id="lightboxTag"></div>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div class="container">
+      <div class="vp-footer-brand">Visit <span>Possotomè</span></div>
+      <p class="vp-footer-personal">
+        Une fenêtre sur la vie, la culture et l'âme de Possotomè, Bénin, Afrique de l'Ouest.
+      </p>
+      <hr class="vp-footer-divider">
+      <p class="vp-footer-bottom">
+        &copy; 2026 Djahou Oke, Visit Possotomè &nbsp;|&nbsp; Bénin, Afrique de l'Ouest
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ---- Filtres par catégorie ----
+    const filterBtns = document.querySelectorAll('.vp-filter-btn');
+    const galleryItems = document.querySelectorAll('.vp-gallery-item');
+    const photoCount = document.getElementById('photoCount');
+    const noResults = document.getElementById('noResults');
+
+    function applyFilter(filter) {
+      let count = 0;
+      galleryItems.forEach(item => {
+        const visible = filter === 'all' || item.dataset.category === filter;
+        item.hidden = !visible;
+        if (visible) count++;
+      });
+      noResults.style.display = count === 0 ? 'block' : 'none';
+      photoCount.textContent = count + ' photo' + (count > 1 ? 's' : '');
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-pressed', 'true');
+        applyFilter(this.dataset.filter);
+      });
+    });
+
+    applyFilter('all');
+
+    // ---- Lightbox ----
+    const lightboxEl = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    lightboxEl.addEventListener('show.bs.modal', function (e) {
+      const trigger = e.relatedTarget;
+      if (!trigger) return;
+      const thumb = trigger.querySelector('img');
+      lightboxImg.src = trigger.dataset.img || '';
+      lightboxImg.alt = thumb ? thumb.alt : '';
+      document.getElementById('lightboxCaption').textContent = trigger.dataset.caption || '';
+      document.getElementById('lightboxTag').textContent = trigger.dataset.tag || '';
+    });
+
+    // Libère la mémoire quand la lightbox se ferme
+    lightboxEl.addEventListener('hidden.bs.modal', function () {
+      lightboxImg.src = '';
+    });
+
+    // Ouverture au clavier (Entrée / Espace) sur les cartes
+    document.querySelectorAll('.vp-gallery-card[role="button"]').forEach(card => {
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          bootstrap.Modal.getOrCreateInstance(lightboxEl).show(card);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

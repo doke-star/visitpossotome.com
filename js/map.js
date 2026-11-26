@@ -51,7 +51,7 @@
     { c: 'village', lat: 6.52166, lng: 1.96812, n: { en: 'Possotomè Centre', fr: 'Possotomè Centre' },
       d: { en: 'The heart of the arrondissement: UJAP, health centre, CACE Sunday evenings. Kotafon is spoken here.', fr: 'Le cœur de l\'arrondissement : UJAP, centre de santé, soirées du CACE. On y parle le kotafon.' } },
     { c: 'village', lat: 6.51536, lng: 1.96417, n: 'Wocomey',
-      d: { en: 'Between Possotomè Centre and Sèhomi.', fr: 'Entre Possotomè Centre et Sèhomi.' } },
+      d: { en: 'Neighbour of Possotomè Centre; on its other side lie the two Sèhomi villages.', fr: 'Voisin de Possotomè Centre ; de l\'autre côté se trouvent les deux villages de Sèhomi.' } },
     { c: 'village', lat: 6.50946, lng: 1.96242, n: 'Sèhomi Kogbomè',
       d: { en: 'Next to the Gassiagamè barter market.', fr: 'Voisin du marché de troc Gassiagamè.' } },
     { c: 'village', lat: 6.50600, lng: 1.96273, n: 'Sèhomi Dato',

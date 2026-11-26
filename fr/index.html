@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visit Possotomè | Tourisme, culture et lac Ahémé à Bopa, Bénin</title>
+  <meta name="description" content="Visit Possotomè : découvrez la culture, le tourisme, la vie au bord du lac et la communauté de Possotomè, sur les rives du lac Ahémé au Bénin, Afrique de l'Ouest.">
+  <meta name="theme-color" content="#185FA5">
+  <link rel="canonical" href="https://visitpossotome.com/fr/">
+  <link rel="alternate" hreflang="en" href="https://visitpossotome.com/">
+  <link rel="alternate" hreflang="fr" href="https://visitpossotome.com/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://visitpossotome.com/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Visit Possotomè">
+  <meta property="og:title" content="Visit Possotomè">
+  <meta property="og:description" content="Découvrez Possotomè, un trésor caché au bord du lac Ahémé, au Bénin.">
+  <meta property="og:url" content="https://visitpossotome.com/fr/">
+  <meta property="og:image" content="https://visitpossotome.com/img/possotome-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icônes -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Visit Possotomè">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Polices + Bootstrap 5 + notre CSS unique -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="../img/hero.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Leaflet : carte interactive des villages (fond OpenStreetMap) -->
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Données structurées : le site et la destination -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Visit Possotomè",
+      "url": "https://visitpossotome.com/fr/",
+      "description": "Une fenêtre sur la vie, la culture et l'âme de Possotomè, Bénin, Afrique de l'Ouest.",
+      "inLanguage": "fr",
+      "author": { "@type": "Person", "name": "Djahou Oke" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristDestination",
+      "name": "Possotomè",
+      "description": "Une localité au bord du lac Ahémé, dans le sud du Bénin, connue pour ses sources thermales, le festival Awilé et ses dix villages.",
+      "url": "https://visitpossotome.com/fr/",
+      "image": "https://visitpossotome.com/img/possotome-cover.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Possotomè",
+        "addressRegion": "Mono",
+        "addressCountry": "BJ"
+      },
+      "containedInPlace": { "@type": "AdministrativeArea", "name": "Commune de Bopa, département du Mono, Bénin" },
+      "touristType": ["Culture", "Écotourisme", "Nature"]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Navigation principale">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../img/logo.svg" alt="Visit Possotomè" class="logo-img" width="220" height="60">
+      </a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu de navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="life.html">Vie locale</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="visit.html">Votre visite</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link vp-lang" href="../index.html" lang="en" hreflang="en" aria-label="English version"><i class="bi bi-translate me-1" aria-hidden="true"></i>EN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" aria-label="Bienvenue">
+
+    <!-- Les slides — images en rotation (décoratives) -->
+    <div class="vp-hero-slide" aria-hidden="true"></div>
+    <div class="vp-hero-slide" aria-hidden="true"></div>
+    <div class="vp-hero-slide" aria-hidden="true"></div>
+    <div class="vp-hero-slide" aria-hidden="true"></div>
+    <div class="vp-hero-slide" aria-hidden="true"></div>
+    <div class="vp-hero-slide" aria-hidden="true"></div>
+
+    <!-- Couche sombre sur les images -->
+    <div class="vp-hero-overlay" aria-hidden="true"></div>
+
+    <!-- Contenu texte -->
+    <div class="vp-hero-content">
+
+      <div class="vp-hero-location">
+        <i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i>
+        Mono, Bénin, Afrique de l'Ouest
+      </div>
+
+      <h1>
+        Bienvenue à<br>
+        <span>Possotomè</span>
+      </h1>
+
+      <p class="vp-hero-description">
+        Une localité vivante sur les rives du lac Ahémé, où se rencontrent
+        des traditions anciennes, des communautés chaleureuses et les
+        bienfaits de la nature.
+      </p>
+
+      <div class="vp-hero-buttons">
+        <a href="life.html" class="vp-btn-hero-white">Découvrir la culture</a>
+        <a href="gallery.html" class="vp-btn-hero-outline">Voir la galerie</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROCHAIN ÉVÉNEMENT
+       Le contenu par défaut (cérémonie royale) est
+       remplacé par le script en bas de page selon
+       la date du jour.
+       ============================================ -->
+  <section class="vp-next-event" aria-labelledby="h-next-event">
+    <div class="container">
+      <div class="vp-next-event-card" id="nextEvent">
+        <div class="vp-next-event-date" aria-hidden="true">
+          <span class="vp-next-event-day" id="nextEventDay">10</span>
+          <span class="vp-next-event-month" id="nextEventMonth">Janv.</span>
+        </div>
+        <div class="vp-next-event-text">
+          <p class="vp-section-label mb-1">
+            <i class="bi bi-calendar-event-fill me-1" aria-hidden="true"></i>
+            Prochain événement <span class="vp-next-event-countdown" id="nextEventCountdown"></span>
+          </p>
+          <h2 id="h-next-event" class="vp-next-event-title">
+            <span id="nextEventTitle">La cérémonie royale de janvier</span>
+          </h2>
+          <p class="vp-next-event-desc" id="nextEventDesc">
+            Chaque 10 janvier, le roi Ayolomi Laté II réunit les dix villages
+            de Possotomè pour la fête nationale du Vodoun.
+          </p>
+        </div>
+        <a id="nextEventLink" href="life.html#royal-ceremony" class="vp-btn-outline vp-next-event-btn">
+          En savoir plus <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p class="vp-next-event-more">
+        <a href="life.html#agenda">Voir l'agenda complet de l'année <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRÉSENTATION
+       ============================================ -->
+  <section class="vp-section-intro" aria-labelledby="h-about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Texte -->
+        <div class="col-lg-6">
+          <p class="vp-section-label">À propos de Possotomè</p>
+          <h2 id="h-about">Une localité façonnée par le lac et ses habitants</h2>
+          <p>
+            Nichée sur les rives du lac Ahémé, dans le sud du Bénin,
+            Possotomè est l'un des trésors cachés du pays.
+            Connue bien au-delà de ses frontières pour ses sources thermales
+            naturelles, elle abrite une riche mosaïque d'ethnies, de traditions
+            et de scènes de vie quotidienne que peu de visiteurs ont eu le
+            privilège de découvrir.
+          </p>
+          <p>
+            Ici, le lac n'est pas seulement un paysage, c'est un mode de vie.
+            Les pêcheurs partent avant l'aube, les enfants jouent au bord de
+            l'eau, et les anciens se retrouvent sous les manguiers pour
+            transmettre les histoires qui soudent la communauté.
+          </p>
+          <a href="life.html" class="vp-btn mt-2 d-inline-block">
+            Explorer la vie à Possotomè
+            <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img src="../img/lake4.jpg"
+               alt="Le lac Ahémé vu depuis la rive de Possotomè"
+               class="vp-img-cover vp-img-h420 vp-rounded-lg vp-shadow"
+               loading="lazy" decoding="async">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CARTES
+       ============================================ -->
+  <section class="vp-section-cards" aria-labelledby="h-glimpse">
+    <div class="container">
+
+      <div class="vp-section-header">
+        <p class="vp-section-label">Un aperçu de Possotomè</p>
+        <h2 id="h-glimpse">Vie, culture et découverte</h2>
+        <p class="vp-section-sub">
+          Trois fenêtres sur ce qui rend Possotomè unique, racontées par
+          quelqu'un qui y a grandi.
+        </p>
+      </div>
+
+      <div class="vp-grid">
+
+        <!-- Carte 1 : vie autour du lac -->
+        <div>
+          <a href="life.html" class="vp-photo-card">
+            <img src="../img/lake3.jpg" alt="La vie sur le lac Ahémé"
+                 class="vp-photo-card-img" loading="lazy" decoding="async">
+            <div class="vp-photo-card-body">
+              <span class="vp-tag">Vie quotidienne</span>
+              <h3>Le lac, rythme de la vie</h3>
+              <p>
+                Avant le lever du soleil, les pêcheurs sont déjà sur l'eau.
+                La vie à Possotomè suit le rythme paisible du lac Ahémé.
+              </p>
+              <span class="vp-photo-card-link">
+                En découvrir plus <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Carte 2 : traditions et fêtes -->
+        <div>
+          <a href="life.html" class="vp-photo-card">
+            <img src="../img/hero3.jpg" alt="Fête traditionnelle à Possotomè"
+                 class="vp-photo-card-img" loading="lazy" decoding="async">
+            <div class="vp-photo-card-body">
+              <span class="vp-tag">Culture</span>
+              <h3>Des traditions toujours vivantes</h3>
+              <p>
+                Du festival Awilé aux cérémonies royales de janvier,
+                Possotomè vit son héritage avec fierté et joie.
+              </p>
+              <span class="vp-photo-card-link">
+                En découvrir plus <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Carte 3 : les gens -->
+        <div>
+          <a href="gallery.html" class="vp-photo-card">
+            <img src="../img/facefull.jpg" alt="Habitants de Possotomè"
+                 class="vp-photo-card-img" loading="lazy" decoding="async">
+            <div class="vp-photo-card-body">
+              <span class="vp-tag">Habitants</span>
+              <h3>Des visages pleins d'histoires</h3>
+              <p>
+                Les habitants de Possotomè sont son plus grand trésor :
+                chaleureux, résilients et profondément attachés à leurs racines.
+              </p>
+              <span class="vp-photo-card-link">
+                Voir la galerie <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CITATION
+       ============================================ -->
+  <section class="vp-section-quote" aria-label="Citation de l'auteur">
+    <blockquote>
+      « Possotomè ne m'a pas fait par hasard tel que je suis,
+      elle m'a façonné par son lac, ses habitants et ses histoires.
+      Ce site est ma façon de dire merci. »
+    </blockquote>
+    <cite>Djahou Oke, né et grandi à Possotomè</cite>
+  </section>
+
+  <!-- ============================================
+       LOCALISATION
+       ============================================ -->
+  <section class="vp-section" aria-labelledby="h-location">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 id="h-location">Où se trouve Possotomè ?</h2>
+        <p class="vp-location-text">
+          Posée sur les rives paisibles du lac Ahémé, dans le sud du Bénin,
+          Possotomè est une destination culturelle et historique connue pour
+          sa source thermale, ses riches traditions et sa vie communautaire
+          animée. Située dans la commune de Bopa, département du Mono,
+          elle est formée d'un réseau de villages unis par une identité
+          culturelle commune, des traditions ancestrales et des liens
+          communautaires forts.
+        </p>
+      </div>
+
+      <!-- Carte interactive (Leaflet + OpenStreetMap).
+           Les points de la carte sont dans js/map.js -->
+      <div class="vp-map-block vp-map-block-home">
+        <div class="vp-map" data-vp-map role="region"
+             aria-label="Carte interactive des villages et des lieux de Possotomè"></div>
+        <noscript>
+          <p class="vp-map-note">
+            La carte interactive nécessite JavaScript. Possotomè se trouve sur
+            la rive ouest du lac Ahémé, dans la commune de Bopa.
+          </p>
+        </noscript>
+        <div class="vp-map-legend" data-vp-map-legend></div>
+        <div class="vp-map-actions">
+          <button type="button" class="vp-btn-outline" data-vp-map-toggle>Voir Possotomè dans le Bénin</button>
+          <a href="https://www.google.com/maps/place/Possotom%C3%A9,+Bopa/" target="_blank" rel="noopener noreferrer">
+            Itinéraire sur Google Maps <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <p class="text-center mt-4 vp-location-caption">
+        <i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i>
+        Possotomè — Commune de Bopa, département du Mono, République du Bénin
+      </p>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer>
+    <div class="container">
+      <div class="vp-footer-brand">Visit <span>Possotomè</span></div>
+      <p class="vp-footer-personal">
+        Une fenêtre sur la vie, la culture et l'âme de Possotomè, Bénin, Afrique de l'Ouest.
+      </p>
+      <hr class="vp-footer-divider">
+      <p class="vp-footer-bottom">
+        &copy; 2026 Djahou Oke, Visit Possotomè &nbsp;|&nbsp; Bénin, Afrique de l'Ouest
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Carte interactive : Leaflet, puis nos points (js/map.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="../js/map.js" defer></script>
+
+  <!-- Prochain événement : choisit le rendez-vous le plus proche selon la date du jour -->
+  <script>
+    (function () {
+      // Chaque événement sait calculer sa prochaine date à partir d'une année.
+      var events = [
+        {
+          title: 'La cérémonie royale de janvier',
+          desc: 'Chaque 10 janvier, le roi Ayolomi Laté II réunit les dix villages de Possotomè pour la fête nationale du Vodoun.',
+          link: 'life.html#royal-ceremony',
+          month: 'Janv.',
+          day: '10',
+          next: function (y) { return new Date(y, 0, 10); }
+        },
+        {
+          title: 'Le festival Awilé',
+          desc: 'En février, Possotomè honore Awilé, la déesse du lac Ahémé, avec les danses Zandro la veille et une grande cérémonie sur la rive.',
+          link: 'life.html#awile',
+          month: 'Févr.',
+          day: '',
+          // Le jour exact varie : on se base sur le 1er février.
+          next: function (y) { return new Date(y, 1, 1); },
+          lastDay: function (y) { return new Date(y, 2, 0); }
+        },
+        {
+          title: 'Les soirées culturelles du CACE',
+          desc: 'Chaque dimanche soir d\'août, poésie, danse, musique et contes animent Possotomè Centre.',
+          link: 'life.html#cace',
+          month: 'Août',
+          day: '',
+          // Premier dimanche d'août.
+          next: function (y) { var d = new Date(y, 7, 1); return new Date(y, 7, 1 + (7 - d.getDay()) % 7); },
+          lastDay: function (y) { return new Date(y, 8, 0); }
+        }
+      ];
+
+      // Retourne l'événement le plus proche pour une date donnée.
+      function pickNext(today) {
+        today = new Date(today);
+        today.setHours(0, 0, 0, 0);
+        var year = today.getFullYear();
+        var best = null;
+        events.forEach(function (ev) {
+          var start = ev.next(year);
+          var end = ev.lastDay ? ev.lastDay(year) : start;
+          // Événement en cours ? On le garde avec 0 jour d'attente.
+          if (today >= start && today <= end) {
+            if (!best || best.wait > 0) best = { ev: ev, date: start, wait: 0 };
+            return;
+          }
+          if (start < today) start = ev.next(year + 1);
+          var wait = Math.round((start - today) / 86400000);
+          if (!best || wait < best.wait) best = { ev: ev, date: start, wait: wait };
+        });
+        return best;
+      }
+      window.vpPickNextEvent = pickNext;
+
+      var best = pickNext(new Date());
+      if (!best) return;
+      var ev = best.ev;
+      document.getElementById('nextEventTitle').textContent = ev.title;
+      document.getElementById('nextEventDesc').textContent = ev.desc;
+      document.getElementById('nextEventLink').href = ev.link;
+      document.getElementById('nextEventMonth').textContent = ev.month;
+      document.getElementById('nextEventDay').textContent = ev.day || String(best.date.getFullYear());
+
+      var cd = document.getElementById('nextEventCountdown');
+      if (best.wait === 0) cd.textContent = '· en ce moment';
+      else if (best.wait === 1) cd.textContent = '· demain';
+      else cd.textContent = '· dans ' + best.wait + ' jours';
+    })();
+  </script>
+
+</body>
+</html>

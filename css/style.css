@@ -158,6 +158,21 @@ img {
   font-weight: 700;
 }
 
+/* Sélecteur de langue (FR / EN) : dernier lien du menu, encadré */
+.navbar .nav-link.vp-lang {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin-left: 0.4rem;
+}
+
+@media (max-width: 991.98px) {
+  /* Menu replié : le sélecteur s'aligne avec les autres liens */
+  .navbar .nav-link.vp-lang {
+    margin: 0.4rem 0 0;
+  }
+}
+
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.5);
 }
@@ -2175,4 +2190,8 @@ main:has(.vp-cta-band) ~ footer {
 
   /* Carte des villages : moins haute sur téléphone */
   .vp-map { height: 380px; }
+
+  /* Rangées .g-5 de Bootstrap : la gouttière horizontale de 3rem
+     dépasse la marge du conteneur et crée un défilement latéral */
+  .row.g-5 { --bs-gutter-x: 1.5rem; }
 }
