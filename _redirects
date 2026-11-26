@@ -1,0 +1,3 @@
+# Netlify : pour une adresse inconnue sous /fr/, afficher la page 404 française.
+# (Les pages existantes ne sont pas concernées : Netlify sert d'abord les fichiers.)
+/fr/*   /fr/404.html   404
